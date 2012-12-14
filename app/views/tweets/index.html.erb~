@@ -1,0 +1,5 @@
+<% @tweets.each do |tweet| %>
+    <li><%= tweet.body %></li>
+<% end %>
+
+yo
