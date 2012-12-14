@@ -1,6 +1,9 @@
 Hrhome::Application.routes.draw do
 
-  resources :homes
+  match 'home/recruitment' => 'home#recruitment'
+  match 'home/performance' => 'home#performance'
+
+  resources :home
 
   resources :positions
 

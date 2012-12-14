@@ -76,19 +76,11 @@ form .field, form .actions {
   padding: 10px;
   width: 775px;
   border: solid 3px #333;
-  margin: 15px;
+  margin: 20px;
 }
 
-.comment {
-  border-bottom: solid 1px #999;
-  margin: 15px 0;
-  color:#000;
-}
-
-.comment .author_name {
-  font-weight: bold;
-}
-
-.comment:last-child {
-  border-bottom: none;
+#comments-position {
+  position: relative;
+  top: 0px;
+  left: 220px;
 }

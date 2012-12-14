@@ -1,5 +1,9 @@
 Hrhome::Application.routes.draw do
 
+  match 'home/salary' => 'home#salary'
+  match 'home/hr' => 'home#hr'
+  match 'home/dictionary' => 'home#dictionary'
+
   resources :home
 
   resources :positions

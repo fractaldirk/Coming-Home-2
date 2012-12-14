@@ -1,5 +1,11 @@
 class HomeController < ApplicationController
-  def livescreen
+  def index
     @tweets = Tweet.all
+  end
+  def recruitment
+
+  end
+  def performance
+
   end
 end

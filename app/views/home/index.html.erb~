@@ -1,7 +1,14 @@
 <h2>Human Resources - Home</h2>
 
-<% @tweets.each do |tweet| %>
-  <li id="comments"><%= tweet.body %></li>
-<% end %>
-
 <br/>
+<br/>
+
+<div id="col1" style="float: left; width: 15%; margin: -4px; ">
+  <%= render 'menu' %>
+</div>
+
+<div id="comments-position">
+  <% @tweets.each do |tweet| %>
+    <p id="comments"><%= tweet.body %></p><br/>
+  <% end %>
+</div>
