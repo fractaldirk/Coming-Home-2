@@ -1,6 +1,6 @@
 Hrhome::Application.routes.draw do
 
-  get "tweets/index"
+  resources :homes
 
   resources :positions
 

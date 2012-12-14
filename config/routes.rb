@@ -1,6 +1,6 @@
 Hrhome::Application.routes.draw do
 
-  resources :tweets
+  resources :home
 
   resources :positions
 
