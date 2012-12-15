@@ -1,5 +1,7 @@
 <center>
-  <h2>Greenpeace <%= office_name %> - Home</h2>
+  <h2><% if user_signed_in? %>
+    Greenpeace <%= office_name %> - Home
+  <% end %></h2>
 </center>
 
 

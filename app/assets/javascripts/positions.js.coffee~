@@ -2,7 +2,5 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-$ ->
-  $('#tweet').click ->
-    text = $('#tweet').text()
-    $('#job_title').val(text)
+$('#job_title').val() ->
+  $('#tweet_title').val(this.value)

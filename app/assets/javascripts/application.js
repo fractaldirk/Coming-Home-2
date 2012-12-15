@@ -18,4 +18,8 @@
 
 $(function() {
     $( "#menu" ).menu();
+
+    $('#job_title').on('change', function(e){
+      $('#tweet_title').val($('#job_title').val());
+    });
 });
