@@ -13,19 +13,35 @@
 
   <div class="field">
     <%= f.label :job_title %><br />
-    <%= f.text_field :job_title %>
+    <%= f.text_field :job_title, :id => "job_title" %>
   </div>
 
   <div class="field">
     <%= f.label :office %><br />
-    <%= f.number_field :office %>
+    <%= f.number_field :office, :value => current_user.user_office %>
   </div>
 
-  <%= form_for(@tweet) do |fa| %>
+  <%= fields_for(@tweet) do |fa| %>
     <div class="field">
       <%= fa.label :body %><br />
-      <%= fa.text_area :body, :value => "position created by person X" %>
+      <%= fa.text_area :body, :placeholder => "Add here your activity notes" %>
     </div>
+
+    <div class="field">
+      <%= fa.label :tweet_office %><br />
+      <%= fa.number_field :tweet_office, :value => current_user.user_office %>
+    </div>
+
+    <div class="field">
+      <%= fa.label :tweet_position %><br />
+      <%= fa.text_field :tweet_position, :value => "tbd"  %>
+    </div>
+
+    <div class="field">
+      <%= fa.label :tweet_name %><br />
+      <%= fa.text_field :tweet_name, :value => current_user.user_name  %>
+    </div>
+
   <% end %>
 
 

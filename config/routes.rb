@@ -1,5 +1,7 @@
 Hrhome::Application.routes.draw do
 
+  devise_for :users
+
   match 'home/salary' => 'home#salary'
   match 'home/hr' => 'home#hr'
   match 'home/dictionary' => 'home#dictionary'

@@ -1,5 +1,5 @@
 <center>
-  <h2>Human Resources - Home</h2>
+  <h2>Greenpeace <%= office_name %> - Home</h2>
 </center>
 
 

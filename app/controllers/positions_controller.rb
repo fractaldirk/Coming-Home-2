@@ -36,6 +36,7 @@ class PositionsController < ApplicationController
   # GET /positions/1/edit
   def edit
     @position = Position.find(params[:id])
+    @tweet = Tweet.new
   end
 
   # POST /positions
@@ -60,9 +61,11 @@ class PositionsController < ApplicationController
   # PUT /positions/1.json
   def update
     @position = Position.find(params[:id])
+    @tweet = Tweet.new(params[:tweet])
 
     respond_to do |format|
       if @position.update_attributes(params[:position])
+        @tweet.save
         format.html { redirect_to @position, notice: 'Position was successfully updated.' }
         format.json { head :no_content }
       else

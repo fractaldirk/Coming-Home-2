@@ -1,11 +1,14 @@
 class HomeController < ApplicationController
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.find(:all, :order => "created_at DESC")
   end
-  def recruitment
+  def salary
 
   end
-  def performance
+  def hr
+
+  end
+  def dictionary
 
   end
 end

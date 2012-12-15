@@ -1,0 +1,21 @@
+<table class="table table-hover">
+  <tr>
+    <th>Job title</th>
+    <th>Office</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @positions.each do |position| %>
+  <% if position.office == current_user.user_office %>
+    <tr>
+      <td><%= link_to position.job_title, position %></td>
+      <td>department</td>
+      <td>name person</td>
+      <td><%= link_to 'Edit', edit_position_path(position) %></td>
+      <td><%= link_to 'Destroy', position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+<% end %>
+</table>

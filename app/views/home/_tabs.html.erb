@@ -8,12 +8,18 @@
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="activity">
     <% @tweets.each do |tweet| %>
-      <p class="activity"><%= tweet.body %></p><br/>
+      <% if tweet.tweet_office == current_user.user_office %>
+        <p class="activity">The position <%= tweet.tweet_position %> <%= tweet.tweet_name %> at <%= tweet.created_at %>.<br/>
+        <% if tweet.body? %>
+          (<%= tweet.body %>)
+        <% end %>
+        </p><br/>
+      <% end %>
     <% end %>
   </div>
 
   <div class="tab-pane fade" id="positions">
-    <p>List of positions related to user office</p>
+    <p><%= render 'positions_list' %></p>
   </div>
 
 

@@ -1,0 +1,51 @@
+<%= form_for(@position) do |f| %>
+  <% if @position.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@position.errors.count, "error") %> prohibited this position from being saved:</h2>
+
+      <ul>
+      <% @position.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :job_title %><br />
+    <%= f.text_field :job_title, :id => "job_title" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :office %><br />
+    <%= f.number_field :office, :value => current_user.user_office %>
+  </div>
+
+  <%= fields_for(@tweet) do |fa| %>
+    <div class="field">
+      <%= fa.label :body %><br />
+      <%= fa.text_area :body, :placeholder => "Add here your activity notes" %>
+    </div>
+
+    <div class="field">
+      <%= fa.label :tweet_office %><br />
+      <%= fa.number_field :tweet_office, :value => current_user.user_office %>
+    </div>
+
+    <div class="field">
+      <%= fa.label :tweet_position %><br />
+      <%= fa.text_field :tweet_position, :value => "tbd"  %>
+    </div>
+
+    <div class="field">
+      <%= fa.label :tweet_name %><br />
+      <%= fa.text_field :tweet_name, :value => tweet_updated_by  %>
+    </div>
+
+  <% end %>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
