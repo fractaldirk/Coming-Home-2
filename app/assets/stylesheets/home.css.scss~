@@ -81,6 +81,6 @@ form .field, form .actions {
 
 #comments-position {
   position: relative;
-  top: 10px;
+  top: 0px;
   left: 220px;
 }
