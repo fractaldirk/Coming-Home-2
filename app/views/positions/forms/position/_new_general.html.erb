@@ -1,0 +1,14 @@
+<div class="field">
+  <%= f.label :job_title %><br />
+  <%= f.text_field :job_title, :placeholder => "position name", :id => "job_title" %>
+</div>
+
+<div class="hidden">
+  <%= f.label :office %><br />
+  <%= f.number_field :office, :value => current_user.user_office %>
+</div>
+
+<div class="field">
+  <%= f.label :department %><br />
+  <%= f.text_field :department, :placeholder => "department name" %>
+</div>

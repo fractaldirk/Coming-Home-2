@@ -2,7 +2,7 @@
   <tr>
     <th>Job title</th>
     <th>Office</th>
-    <th></th>
+    <th>Filled by</th>
     <th></th>
     <th></th>
   </tr>
@@ -11,8 +11,8 @@
   <% if position.office == current_user.user_office %>
     <tr>
       <td><%= link_to position.job_title, position %></td>
-      <td>department</td>
-      <td>name person</td>
+      <td><%= position.department %></td>
+      <td><%= position.name %></td>
       <td><%= link_to 'Edit', edit_position_path(position) %></td>
       <td><%= link_to 'Destroy', position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>

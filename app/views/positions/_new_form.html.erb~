@@ -11,41 +11,51 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :job_title %><br />
-    <%= f.text_field :job_title, :id => "job_title" %>
+<ul id="position" class="nav nav-tabs">
+  <li class="active"><a href="#general" data-toggle="tab">General</a></li>
+  <li><a href="#details" data-toggle="tab">Details</a></li>
+  <li><a href="#activity" data-toggle="tab">Activity</a></li>
+</ul>
+
+<div id="position" class="tab-content">
+  <div class="tab-pane fade in active" id="general">
+    <p><%= render 'positions/forms/position/new_general', :f => f %></p>
   </div>
 
-  <div class="field">
-    <%= f.label :office %><br />
-    <%= f.number_field :office, :value => current_user.user_office %>
+  <div class="tab-pane fade" id="details">
+    <p><%= render 'positions/forms/position/new_details', :f => f %></p>
   </div>
 
-  <%= fields_for(@tweet) do |fa| %>
-    <div class="field">
-      <%= fa.label :body %><br />
-      <%= fa.text_area :body, :placeholder => "Add here your activity notes" %>
-    </div>
+  <div class="tab-pane fade" id="activity">
+    <p>
+      <%= fields_for(@tweet) do |fa| %>
+        <div class="field">
+          <%= fa.label :body, "Activity" %><hr />
+          <%= fa.text_area :body, :placeholder => "Add here your activity notes, for example: Need to create a job description" %>
+        </div>
 
-    <div class="field">
-      <%= fa.label :tweet_office %><br />
-      <%= fa.number_field :tweet_office, :value => current_user.user_office %>
-    </div>
+        <div class="hidden">
+          <%= fa.label :tweet_office %><br />
+          <%= fa.number_field :tweet_office, :value => current_user.user_office %>
+        </div>
 
-    <div class="field">
-      <%= fa.label :tweet_position %><br />
-      <%= fa.text_field :tweet_position, :id => "tweet_title" %>
-    </div>
+        <div class="hidden">
+          <%= fa.label :tweet_position %><br />
+          <%= fa.text_field :tweet_position, :id => "tweet_title" %>
+        </div>
 
-    <div class="field">
-      <%= fa.label :tweet_name %><br />
-      <%= fa.text_field :tweet_name, :value => tweet_created_by  %>
-    </div>
+        <div class="hidden">
+          <%= fa.label :tweet_name %><br />
+          <%= fa.text_field :tweet_name, :value => tweet_created_by  %>
+        </div>
 
-  <% end %>
+      <% end %>
 
-
-  <div class="actions">
-    <%= f.submit %>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    </p>
   </div>
+</div>
+
 <% end %>

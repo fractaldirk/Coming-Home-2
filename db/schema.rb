@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121215200255) do
+ActiveRecord::Schema.define(:version => 20121216181736) do
 
   create_table "offices", :force => true do |t|
     t.string   "office_name"
@@ -22,8 +22,29 @@ ActiveRecord::Schema.define(:version => 20121215200255) do
   create_table "positions", :force => true do |t|
     t.string   "job_title"
     t.integer  "office"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.date     "valid_from"
+    t.integer  "job_grade"
+    t.string   "reports_to"
+    t.string   "line_manages"
+    t.text     "overall_purpose"
+    t.text     "scope"
+    t.text     "specific_work_env"
+    t.text     "conceptual"
+    t.text     "implementation"
+    t.text     "support"
+    t.decimal  "fte"
+    t.string   "name"
+    t.date     "brith_date"
+    t.integer  "gender"
+    t.integer  "nationality"
+    t.integer  "res_status"
+    t.date     "start_date"
+    t.integer  "type_contract"
+    t.integer  "unique_position"
+    t.integer  "permanent"
+    t.string   "department"
   end
 
   create_table "tweets", :force => true do |t|

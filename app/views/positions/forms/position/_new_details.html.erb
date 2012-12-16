@@ -1,0 +1,15 @@
+<div class="field">
+  <%= f.label :unique_position, "Is this an unique position?" %><br />
+  <%= f.select(:unique_position, [['Yes', '1'], ['No', '2']], :prompt => "Please select") %>
+</div>
+
+<div class="field">
+  <%= f.label :permanent, "Is this a permanent position?" %><br />
+  <%= f.select(:permanent, [['Permanent', '1'], ['Temporarily', '2']], :prompt => "Please select") %>
+</div>
+
+<div class="field">
+  <%= f.label :fte, "How many fte is this position?" %><br />
+  <%= f.select(:fte, [['Full time', '1.0'], ['0.75', '0.75'], ['0.50', '0.50'],
+                      ['0.25', '0.25'], ['volunteer', '0.0']], :prompt => "Please select") %>
+</div>
