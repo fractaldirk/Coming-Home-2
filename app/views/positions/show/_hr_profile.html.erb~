@@ -1,0 +1,65 @@
+<div class="span1">
+  <br/>
+</div>
+
+<div class="span10">
+
+  <h2>Human Resources Profile</h2>
+  <hr />
+
+  <table class="table">
+    <tr>
+      <th>Personal details</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td><%= @position.name %></td>
+    </tr>
+    <tr>
+      <td>Date of Birth</td>
+      <td><%= @position.birth_date.strftime("%d %B %Y") unless @position.birth_date.nil? %></td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td><%= @position.gender_string %></td>
+    </tr>
+    <tr>
+      <td>Nationality</td>
+      <td><%= @position.nationality_string %></td>
+    </tr>
+    <tr>
+      <td>Residential Status</td>
+      <td><%= @position.residential_status_string %></td>
+    </tr>
+  </table>
+
+  <table class="table">
+    <tr>
+      <th>Job related details</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Start date of employement</td>
+      <td><%= @position.start_date.strftime("%d %B %Y") unless @position.start_date.nil? %></td>
+    </tr>
+    <tr>
+      <td>Type of contract</td>
+      <td><%= @position.type_contract %></td>
+    </tr>
+    <tr>
+      <td>Next Performance Appraisal</td>
+      <td></td>
+    </tr>
+  </table>
+  <hr />
+  <p>
+    <b>Personal Development Notes:</b>
+    <%= simple_format @position.personal_development %>
+  </p>
+
+</div>
+
+<div class="span1">
+  <br/>
+</div>
