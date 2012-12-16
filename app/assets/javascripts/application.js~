@@ -22,4 +22,8 @@ $(function() {
     $('#job_title').on('change', function(e){
       $('#tweet_title').val($('#job_title').val());
     });
+
+    $('#edit_job_title').on('change', function(e){
+      $('#edit_tweet_title').val($('#edit_job_title').val());
+    });
 });

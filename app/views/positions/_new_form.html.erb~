@@ -19,7 +19,12 @@
 
 <div id="position" class="tab-content">
   <div class="tab-pane fade in active" id="general">
-    <p><%= render 'positions/forms/position/new_general', :f => f %></p>
+    <p>
+      <div class="field">
+        <%= f.label :job_title %><br />
+        <%= f.text_field :job_title, :placeholder => "position name", :id => "job_title" %>
+      </div>
+    <%= render 'positions/forms/position/new_general', :f => f %></p>
   </div>
 
   <div class="tab-pane fade" id="details">
@@ -31,7 +36,7 @@
       <%= fields_for(@tweet) do |fa| %>
         <div class="field">
           <%= fa.label :body, "Activity" %><hr />
-          <%= fa.text_area :body, :placeholder => "Add here your activity notes, for example: Need to create a job description" %>
+          <%= fa.text_area :body, :placeholder => "Add here your activity notes, for example: Need to create a job description." %>
         </div>
 
         <div class="hidden">
