@@ -87,4 +87,14 @@ class PositionsController < ApplicationController
     end
   end
 
+  def edit_job_description
+    @position = Position.find(params[:id])
+    @tweet = Tweet.new
+  end
+
+  def edit_hr_profile
+    @position = Position.find(params[:id])
+    @tweet = Tweet.new
+  end
+
 end

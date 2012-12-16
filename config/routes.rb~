@@ -1,12 +1,18 @@
 Hrhome::Application.routes.draw do
 
+  devise_for :users
+
   match 'home/salary' => 'home#salary'
   match 'home/hr' => 'home#hr'
   match 'home/dictionary' => 'home#dictionary'
 
   resources :home
 
-  resources :positions
+  resources :positions do
+    member do
+      get 'edit_job_description'
+    end
+  end
 
   resources :offices
 
@@ -59,7 +65,7 @@ Hrhome::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'offices#index'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 

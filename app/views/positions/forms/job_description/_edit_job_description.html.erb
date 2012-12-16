@@ -1,0 +1,97 @@
+<%= form_for(@position) do |f| %>
+  <% if @position.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@position.errors.count, "error") %> prohibited this position from being saved:</h2>
+
+      <ul>
+      <% @position.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<ul class="nav nav-tabs" id="myTab">
+  <li class="active"><a href="#general" data-toggle="tab">General</a></li>
+  <li><a href="#purpose" data-toggle="tab">Overall purpose & Scope</a></li>
+  <li><a href="#responsibilities" data-toggle="tab">Responsibilities</a></li>
+  <li><a href="#attitude" data-toggle="tab">Attitude</a></li>
+  <li><a href="#activity" data-toggle="tab">Activity</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="general">
+
+    <div class="field">
+      <%= f.label :job_title %>
+      <%= f.text_field :job_title %>
+    </div>
+
+    <div class="field">
+    	  <%= f.label :valid_from %><br />
+          <%= f.date_select(:valid_from, :order => [:day, :month, :year]) %>
+  	</div>
+
+  	<div class="field">
+    	  <%= f.label :job_grade %><br />
+    	  <%= f.select(:job_grade, [['P', '1'],['Q','2'],['R', '3'], ['S', '4'], ['T', '5']], :prompt => "Please select") %>
+  	</div>
+
+  	<div class="field">
+    	  <%= f.label :reports_to %><br />
+    	  <%= f.text_field :reports_to %>
+  	</div>
+
+  	<div class="field">
+    	  <%= f.label :line_manages %><br />
+    	  <%= f.text_field :line_manages %>
+  	</div>
+
+  	<div class="field">
+    	  <%= f.label :specific_work_env, "Specific Work Environment" %><br />
+    	  <%= f.text_area :specific_work_env, :style => "width: 600pt;" "height: 250pt;", :placeholder => "(for example: office based in ..., availability outside working hours, travels, outdoor working conditions ...)" %>
+  	</div>
+  </div>
+
+  <div class="tab-pane" id="purpose">
+    <div class="field">
+    	  <%= f.label :overall_purpose %><br />
+    	  <%= f.text_area :overall_purpose, :style => "width: 600pt;" "height: 250pt;" %>
+  	</div>
+
+  	<div class="field">
+    	  <%= f.label :scope %><br />
+    	  <%= f.text_area :scope, :style => "width: 600pt;" "height: 250pt;", :placeholder => "For example: how many projects a year, how many database entries to be managed, how many invoices to record, how many coordination meetings, how many staff to manage, managed budget magnitude, which interactions with other departments.." %>
+  	</div>
+  </div>
+
+  <div class="tab-pane" id="responsibilities">
+      <div class="field">
+        <%= f.label :conceptual, "Conceptual tasks, Strategy Development and/or Project Development" %><br />
+    	  <%= f.text_area :conceptual, :style => "width: 600pt;" "height: 250pt;", :placeholder => "(study, analyze, design, research, observe, discover, diagnose, anticipate, inventory, understand, learn, invent ...)" %>
+    </div>
+
+    <div class="field">
+    	  <%= f.label :implementation, "Implementation" %><br />
+    	  <%= f.text_area :implementation, :style => "width: 600pt;" "height: 250pt;", :placeholder => "(implement, make, utilize, program, calculate, experiment, renew, determine, regulate, secure, solve, select, apply, change ...)" %>
+  	</div>
+
+    <div class="field">
+    	  <%= f.label :support, "Support / Coaching / Leadership" %><br />
+    	  <%= f.text_area :support, :style => "width: 600pt;" "height: 250pt;", :placeholder => "(animate, lead, train, inform, coordinate, entrust, sell, consult, guide, manage, initiate, delegate, recommend, support ...)" %>
+  	</div>
+  </div>
+
+  <div class="tab-pane" id="attitude">
+    <div class="field">
+      <p>Add attitude fields</p>
+  	</div>
+  </div>
+
+  <div class="tab-pane" id="activity">
+    <%= render 'positions/forms/job_description/create_tweet' %>
+  </div>
+</div>
+
+<%= f.submit "Done", :class => "btn btn-success", :id => "submit_button", :name => "jobdescription_button" %>
+<% end %>

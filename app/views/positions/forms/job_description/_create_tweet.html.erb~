@@ -1,0 +1,22 @@
+<%= fields_for(@tweet) do |fa| %>
+  <div class="field">
+    <%= fa.label :body, "Activity" %><hr />
+    <%= fa.text_area :body, :placeholder => "Add here your activity notes, for example: Need to create a job description." %>
+  </div>
+
+  <div class="hidden">
+    <%= fa.label :tweet_office %><br />
+    <%= fa.number_field :tweet_office, :value => current_user.user_office %>
+  </div>
+
+  <div class="hidden">
+    <%= fa.label :tweet_position %><br />
+    <%= fa.text_field :tweet_position, :value => @position.job_title %>
+  </div>
+
+  <div class="hidden">
+    <%= fa.label :tweet_name %><br />
+    <%= fa.text_field :tweet_name, :value => jd_tweet_updated_by  %>
+  </div>
+
+<% end %>
