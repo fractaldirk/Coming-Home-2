@@ -6,8 +6,3 @@
   position: fixed;
   left: 5%;
 }
-
-#right_button {
-  position: fixed;
-  right: 5%;
-}

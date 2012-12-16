@@ -1,0 +1,87 @@
+<div class="span1">
+  <br/>
+</div>
+
+<div class="span10">
+
+  <center>
+    <h1>Job description</h1>
+    <h3>Greenpeace <%= office_name %></h3>
+  </center>
+
+
+
+  <fieldset>
+    <dl class="dl-horizontal">
+      <dt><strong>Job title:</strong></dt>
+      <dd><strong><%= @position.job_title %></strong></dd>
+      <dt>Valid from:</dt>
+      <dd><%= @position.valid_from.strftime("%d %B %Y") unless @position.valid_from.nil? %></dd>
+      <dt>Job grade:</dt>
+      <dd><%= @position.job_grade %></dd>
+      <dt>Reports to:</dt>
+      <dd><%= @position.reports_to %></dd>
+      <dt>Line manages:</dt>
+      <dd><%= @position.line_manages %></dd>
+    </dl>
+  </fieldset>
+
+  <hr />
+    <p><h3>OVERALL PURPOSE OF JOB</h3></p>
+  <fieldset>
+    <%= simple_format @position.overall_purpose %>
+  </fieldset>
+
+    <p><h3>SCOPE</h3></p>
+  <fieldset>
+    <%= simple_format @position.scope %>
+  </fieldset>
+
+    <p><h3>MAJOR FUNCTIONS / RESPONSIBILITIES</h3></p>
+      <b><u>Conceptual tasks, Strategy Development and/or Project Development</u></b>
+    <fieldset>
+      <%= simple_format @position.conceptual %><br/>
+    </fieldset>
+
+      <b><u>Implementation</u></b>
+    <fieldset>
+      <%= simple_format @position.implementation %><br/>
+    </fieldset>
+
+      <b><u>Support/Coaching/Leadership</u></b>
+    <fieldset>
+        <%= simple_format @position.support %><br/>
+    </fieldset>
+  <br />
+
+  <p><h3>COMPETENCY PROFILE</h3></p>
+  <br />
+    <b><u>Organisational competencies</u></b><br />
+    <ul>
+      <li>Professionalism</li>
+      <li>Achievement</li>
+      <li>Interpersonal relationship</li>
+      <li>Knowlegde sharing</li>
+      <li>values diversity</li>
+      <li>Innovation</li>
+    </ul>
+  <br />
+
+    <b><u>Job related competencies</u></b>
+
+  <p><h3>ATTITUDE</h3></p>
+
+  <br />
+
+    <p><h3>SPECIFIC WORK ENVIRONMENT</h3></p>
+  <fieldset>
+    <%= simple_format @position.specific_work_env %>
+  </fieldset>
+
+  <hr />
+
+</div>
+
+<div class="span1">
+  <br/>
+</div>

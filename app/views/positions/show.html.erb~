@@ -1,17 +1,17 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'New Position', new_position_path  %><br/>
-
-<p>
-  <b>Job title:</b>
-  <%= @position.job_title %>
-</p>
-
-<p>
-  <b>Office:</b>
-  <%= @position.office %>
-</p>
-
-
-<%= link_to 'Edit', edit_position_path(@position) %> |
-<%= link_to 'Back', positions_path %>
+<div id="showCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">
+      <%= render 'positions/show/job_description' %>
+    </div>
+    <div class="item">
+      <%= render 'positions/show/competency_profile' %>
+    </div>
+    <div class="item">
+      <%= render 'positions/show/hr_profile' %>
+    </div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#showCarousel" data-slide="prev" id="left_button">&lsaquo;</a>
+  <a class="carousel-control right" href="#showCarousel" data-slide="next" id="right_button">&rsaquo;</a>
+</div>
