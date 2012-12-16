@@ -1,0 +1,68 @@
+<%= form_for(@position) do |f| %>
+  <% if @position.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@position.errors.count, "error") %> prohibited this position from being saved:</h2>
+
+      <ul>
+      <% @position.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<ul class="nav nav-tabs" id="myTab">
+  <li class="active"><a href="#general" data-toggle="tab">HR profile</a></li>
+  <li><a href="#activity" data-toggle="tab">Activity</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="general">
+
+    <div class="field">
+	    <%= f.label :name %><br />
+	    <%= f.text_field :name %>
+    </div>
+
+	  <div class="field">
+	    <%= f.label :birth_date, "Date of Birth" %><br />
+	    <%= f.date_select(:birth_date, :order => [:day, :month, :year], :start_year => 1930, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }) %>
+	  </div>
+
+	  <div class="field">
+	    <%= f.label :gender %><br />
+	    <%= f.select(:gender, [['Female', '1'], ['Male', '2']], :prompt => 'Please select') %>
+	  </div>
+
+	  <div class="field">
+	    <%= f.label :nationality %><br />
+	    <%= f.select(:nationality, [['Dutch', '1'], ['German', '2']], :prompt => 'Please select') %>
+	  </div>
+
+	  <div class="field">
+	    <%= f.label :res_status, "Visa status" %><br />
+	    <%= f.select(:res_status, [['Permanent Residence Status', '1'], ['Temporarily (visa)', '2']], :prompt => 'Please select') %>
+	  </div>
+
+	  <div class="field">
+	    <%= f.label :start_date, "Start Date (of employement)" %><br />
+	    <%= f.date_select(:start_date, :order => [:day, :month, :year], :start_year => 1972, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }) %>
+	  </div>
+  <hr />
+  <p><i>This is a <span><b><%= @position.permanent_outcome %></b></span> position for <span><b><%= @position.fte %></b></span> FTE</i></p>
+
+	  <div>
+	    <%= f.label :type_contract, "Type of contract" %>
+	    <%= f.select(:type_contract, [['Flexible', '1'], ['1 year fixed', '2'], ['Indefinite fixed', '3']], :prompt => 'Contract') %>
+	  </div>
+	</div>
+  <hr />
+
+  <div class="tab-pane" id="activity">
+    <%= render 'positions/forms/hr_profile/create_tweet' %>
+  </div>
+</div>
+
+<%= f.submit "Save Personal Profile", :name => "personal_profile_button", :class => 'btn btn-success', :id => 'submit_button' %>
+
+<% end %>

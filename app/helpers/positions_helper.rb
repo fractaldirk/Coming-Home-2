@@ -11,4 +11,8 @@ module PositionsHelper
   def jd_tweet_updated_by
     "was updated (job description) by #{current_user.user_name}"
   end
+
+  def hrp_tweet_updated_by
+    "was updated (hr profile) by #{current_user.user_name}"
+  end
 end

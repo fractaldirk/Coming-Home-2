@@ -7,4 +7,8 @@ module PositionsHelper
   def tweet_updated_by
     "was updated by #{current_user.user_name}"
   end
+
+  def jd_tweet_updated_by
+    "was updated (job description) by #{current_user.user_name}"
+  end
 end

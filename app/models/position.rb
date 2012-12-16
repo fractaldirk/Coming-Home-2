@@ -4,4 +4,12 @@ class Position < ActiveRecord::Base
                   :support, :fte, :unique_position, :permanent, :department, :name,
                   :birth_date, :gender, :nationality, :res_status, :start_date, :type_contract
   has_many :tweets
+
+  def permanent_outcome
+    if permanent = 1
+      "permanent"
+    else
+      "temporarily"
+    end
+  end
 end

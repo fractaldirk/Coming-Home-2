@@ -22,15 +22,15 @@
     </tr>
     <tr>
       <td>Gender</td>
-      <td><%= @position.gender_string %></td>
+      <td><%= @position.gender %></td>
     </tr>
     <tr>
       <td>Nationality</td>
-      <td><%= @position.nationality_string %></td>
+      <td><%= @position.nationality %></td>
     </tr>
     <tr>
       <td>Residential Status</td>
-      <td><%= @position.residential_status_string %></td>
+      <td><%= @position.res_status %></td>
     </tr>
   </table>
 
@@ -49,14 +49,10 @@
     </tr>
     <tr>
       <td>Next Performance Appraisal</td>
-      <td></td>
+      <td><%= @position.next_performance_talk.strftime("%d %B %Y") unless @position.next_performance_talk.nil? %></td>
     </tr>
   </table>
   <hr />
-  <p>
-    <b>Personal Development Notes:</b>
-    <%= simple_format @position.personal_development %>
-  </p>
 
 </div>
 
