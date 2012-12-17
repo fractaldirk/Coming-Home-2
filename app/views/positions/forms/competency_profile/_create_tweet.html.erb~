@@ -4,7 +4,7 @@
     <%= fa.text_area :body, :placeholder => "Add here your activity notes, for example: Need to create a job description." %>
   </div>
 
-  <div class="hidden">
+  <div class="field">
     <%= fa.label :tweet_office %><br />
     <%= fa.number_field :tweet_office, :value => @position.office %>
   </div>

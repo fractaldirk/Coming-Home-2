@@ -9,7 +9,7 @@
   <div class="tab-pane fade in active" id="activity">
     <% @tweets.each do |tweet| %>
       <% if tweet.tweet_office == current_user.user_office %>
-        <p class="activity">The position <%= tweet.tweet_position %> <%= tweet.tweet_name %> at <%= tweet.created_at %>.<br/>
+        <p class="activity">The position <strong><%= tweet.tweet_position %></strong> <%= tweet.tweet_name %> at <%= tweet.created_at.strftime("%d %B %Y at %H:%M") %>.<br/>
         <% if tweet.body? %>
           (<%= tweet.body %>)
         <% end %>

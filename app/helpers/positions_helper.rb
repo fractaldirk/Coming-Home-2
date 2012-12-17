@@ -15,4 +15,8 @@ module PositionsHelper
   def hrp_tweet_updated_by
     "was updated (hr profile) by #{current_user.user_name}"
   end
+
+  def cp_tweet_updated_by
+    "was updated (competency profile) by #{current_user.user_name}"
+  end
 end
