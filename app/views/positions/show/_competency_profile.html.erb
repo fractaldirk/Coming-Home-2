@@ -3,7 +3,22 @@
 </div>
 
 <div class="span10">
-  <p>some content</p>
+  <h2>Competency Profile</h2>
+
+  <table class="table">
+    <tr>
+      <th id="competency_field">Competency</th>
+      <th>Importance level</th>
+      <th>CP Value</th>
+    </tr>
+    <% for competency in @position.competencies %>
+    <tr>
+      <td><%=h competency.competency_name %></td>
+      <td><%=h competency.competency_value %></td>
+      <td><%=h competency.competency_cpv  %></td>
+    </tr>
+    <% end %>
+  </table>
 </div>
 
 <div class="span1">
