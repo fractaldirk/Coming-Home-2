@@ -12,6 +12,7 @@ Hrhome::Application.routes.draw do
     member do
       get 'edit_job_description'
       get 'edit_hr_profile'
+      get 'edit_competency_profile'
     end
   end
 

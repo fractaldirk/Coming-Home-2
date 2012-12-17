@@ -1,0 +1,7 @@
+<fieldset>
+  <td id="competency_field"><%= f.text_field :competency_name, :id => "competency_field" %></td>
+  <td><%= f.select(:competency_value, ['1','2','3','4']) %></td>
+  <td><%= f.select(:competency_cpv, ['1','2','3','4'] ) %></td>
+  <td><%= f.hidden_field :_destroy %>
+      <%= link_to "remove", '#', class: "remove_fields" %></td>
+</fieldset>

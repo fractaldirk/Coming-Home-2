@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  competency_name: MyString
+  competency_value: 1
+  competency_cpv: 1
+  job_title: MyString
+  department: MyString
+  office: 1
+  position: 
+
+two:
+  competency_name: MyString
+  competency_value: 1
+  competency_cpv: 1
+  job_title: MyString
+  department: MyString
+  office: 1
+  position: 

@@ -6,3 +6,12 @@
   position: fixed;
   left: 5%;
 }
+
+#right_button {
+  position: fixed;
+  right: 5%;
+}
+
+#competency_field {
+  width: 300pt;
+}
