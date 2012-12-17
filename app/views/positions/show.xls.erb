@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+
+  <Worksheet ss:Name="Guidelines">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">What is a Profiency Level</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String"></Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">The proficiency scale describes an individual’s level of expertise in a particular competency.</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">It describes the degree to which an employee possesses a competency.</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Each level in the proficiency scale has a detailed description to help identify an employee’s level of proficiency.</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">All 3 types of competencies are segregated into 4 proficiency levels:</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">- Beginner</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">- Basic</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">- Intermediate</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">- Advanced</Data></Cell>
+      </Row>
+    </Table>
+  </Worksheet>
+
+  <Worksheet ss:Name="<%= @position.name %>">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Competency</Data></Cell>
+        <Cell><Data ss:Type="String">Reqested Profiency level</Data></Cell>
+        <Cell><Data ss:Type="String">Competency value</Data></Cell>
+        <Cell><Data ss:Type="String">Personal value</Data></Cell>
+      </Row>
+    <% for competency in @position.competencies %>
+      <Row>
+        <Cell><Data ss:Type="String"><%=h competency.competency_name %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%=h competency.competency_cpv %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%=h competency.competency_value %></Data></Cell>
+        <Cell><Data ss:Type="Number"></Data>0</Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+
+</Workbook>

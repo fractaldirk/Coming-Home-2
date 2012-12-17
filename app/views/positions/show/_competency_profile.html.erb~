@@ -1,11 +1,12 @@
 <div class="span1">
-  <br/><%= link_to 'Edit competency profile', edit_competency_profile_position_path %>
+  <br/><%= link_to 'Edit competency profile', edit_competency_profile_position_path %><br/>
+  <br/>Download: <%= link_to 'Excel', position_path(format: "xls") %>
 </div>
 
 <div class="span10">
   <h2>Competency Profile</h2>
 
-  <table class="competencies">
+  <table class="table">
     <tr>
       <th id="competency_field">Competency</th>
       <th>Importance level</th>

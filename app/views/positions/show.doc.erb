@@ -1,0 +1,72 @@
+<center>
+  <h1>Job description</h1>
+  <h3>Greenpeace <%= office_name %></h3>
+</center>
+
+
+<fieldset>
+  <dl class="dl-horizontal">
+    <dt><strong>Job title:</strong></dt>
+    <dd><strong><%= @position.job_title %></strong></dd>
+    <dt>Valid from:</dt>
+    <dd><%= @position.valid_from.strftime("%d %B %Y") unless @position.valid_from.nil? %></dd>
+    <dt>Job grade:</dt>
+    <dd><%= @position.job_grade %></dd>
+    <dt>Reports to:</dt>
+    <dd><%= @position.reports_to %></dd>
+    <dt>Line manages:</dt>
+    <dd><%= @position.line_manages %></dd>
+  </dl>
+</fieldset>
+
+<hr />
+  <p><h4>OVERALL PURPOSE OF JOB</h4></p>
+<fieldset>
+  <%= simple_format @position.overall_purpose %>
+</fieldset>
+
+  <p><h4>SCOPE</h4></p>
+<fieldset>
+  <%= simple_format @position.scope %>
+</fieldset>
+
+  <p><h4>MAJOR FUNCTIONS / RESPONSIBILITIES</h4></p>
+    <b><u>Conceptual tasks, Strategy Development and/or Project Development</u></b>
+  <fieldset>
+    <%= simple_format @position.conceptual %><br/>
+  </fieldset>
+
+    <b><u>Implementation</u></b>
+  <fieldset>
+    <%= simple_format @position.implementation %><br/>
+  </fieldset>
+
+    <b><u>Support/Coaching/Leadership</u></b>
+  <fieldset>
+      <%= simple_format @position.support %><br/>
+  </fieldset>
+<br />
+
+<p><h4>COMPETENCY PROFILE</h4></p>
+<br />
+  <b><u>Organisational competencies</u></b><br />
+  <ul>
+    <li>Professionalism</li>
+    <li>Achievement</li>
+    <li>Interpersonal relationship</li>
+    <li>Knowlegde sharing</li>
+    <li>values diversity</li>
+    <li>Innovation</li>
+  </ul>
+<br />
+
+  <b><u>Job related competencies</u></b>
+
+<p><h4>ATTITUDE</h4></p>
+
+<br />
+
+  <p><h4>SPECIFIC WORK ENVIRONMENT</h4></p>
+<fieldset>
+  <%= simple_format @position.specific_work_env %>
+</fieldset>

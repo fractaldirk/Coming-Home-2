@@ -18,6 +18,9 @@ class PositionsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @position }
+      format.xls
+      format.doc
+      format.pdf
     end
   end
 
@@ -100,7 +103,7 @@ class PositionsController < ApplicationController
   def edit_competency_profile
     @position = Position.find(params[:id])
     @tweet = Tweet.new
-    3.times { @position.competencies.build }
+    1.times { @position.competencies.build }
   end
 
 end

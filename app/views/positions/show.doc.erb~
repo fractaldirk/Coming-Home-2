@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE html
+   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      ****
+    </title>
+  </head>
+  <body>
+    <center>
+      <h1>
+        Job description
+      </h1>
+      <h3>
+        Greenpeace &lt;%= office_name %>
+      </h3>
+    </center>
+    <fieldset>
+      <dl class="dl-horizontal">
+        <dt>
+          <strong>Job title:</strong>
+        </dt>
+        <dd>
+          <strong>&lt;%= @position.job_title %></strong>
+        </dd>
+        <dt>
+          Valid from:
+        </dt>
+        <dd>
+          &lt;%= @position.valid_from.strftime("%d %B %Y") unless
+          @position.valid_from.nil? %>
+        </dd>
+        <dt>
+          Job grade:
+        </dt>
+        <dd>
+          &lt;%= @position.job_grade %>
+        </dd>
+        <dt>
+          Reports to:
+        </dt>
+        <dd>
+          &lt;%= @position.reports_to %>
+        </dd>
+        <dt>
+          Line manages:
+        </dt>
+        <dd>
+          &lt;%= @position.line_manages %>
+        </dd>
+      </dl>
+    </fieldset>
+    <hr />
+    <p></p>
+    <h4>
+      OVERALL PURPOSE OF JOB
+    </h4>
+    <fieldset>
+      &lt;%= simple_format @position.overall_purpose %>
+    </fieldset>
+    <p></p>
+    <h4>
+      SCOPE
+    </h4>
+    <fieldset>
+      &lt;%= simple_format @position.scope %>
+    </fieldset>
+    <p></p>
+    <h4>
+      MAJOR FUNCTIONS / RESPONSIBILITIES
+    </h4>
+    <b><u>Conceptual tasks, Strategy Development and/or Project
+    Development</u></b>
+    <fieldset>
+      &lt;%= simple_format @position.conceptual %><br />
+    </fieldset>
+    <b><u>Implementation</u></b>
+    <fieldset>
+      &lt;%= simple_format @position.implementation %><br />
+    </fieldset>
+    <b><u>Support/Coaching/Leadership</u></b>
+    <fieldset>
+      &lt;%= simple_format @position.support %><br />
+    </fieldset>
+    <br />
+    <p></p>
+    <h4>
+      COMPETENCY PROFILE
+    </h4>
+    <br /> <b><u>Organisational competencies</u></b><br />
+    <ul>
+      <li>
+        Professionalism
+      </li>
+      <li>
+        Achievement
+      </li>
+      <li>
+        Interpersonal relationship
+      </li>
+      <li>
+        Knowlegde sharing
+      </li>
+      <li>
+        values diversity
+      </li>
+      <li>
+        Innovation
+      </li>
+    </ul>
+    <br /> <b><u>Job related competencies</u></b>
+    <p></p>
+    <h4>
+      ATTITUDE
+    </h4>
+    <br />
+    <p></p>
+    <h4>
+      SPECIFIC WORK ENVIRONMENT
+    </h4>
+    <fieldset>
+      &lt;%= simple_format @position.specific_work_env %>
+    </fieldset>
+  </body>
+</html>
