@@ -1,7 +1,10 @@
 class HomeController < ApplicationController
+  before_filter :authenticate_user!
+
   def index
     @tweets = Tweet.find(:all, :order => "created_at DESC")
     @positions = Position.all
+    @prtalks = Position.find(:all, :order => "next_performance_talk DESC")
   end
   def salary
 

@@ -55,6 +55,11 @@
 	    <%= f.label :type_contract, "Type of contract" %>
 	    <%= f.select(:type_contract, [['Flexible', '1'], ['1 year fixed', '2'], ['Indefinite fixed', '3']], :prompt => 'Contract') %>
 	  </div>
+
+	  <div class="field">
+	    <%= f.label :next_performance_talk, "Next PRT scheduled for" %><br />
+	    <%= f.date_select(:next_performance_talk, :order => [:day, :month, :year], :start_year => 2013, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }) %>
+	  </div>
 	</div>
   <hr />
 
