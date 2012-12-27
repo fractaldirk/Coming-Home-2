@@ -8,6 +8,8 @@ Hrhome::Application.routes.draw do
 
   resources :home
 
+  resources :competencies
+
   resources :positions do
     member do
       get 'edit_job_description'

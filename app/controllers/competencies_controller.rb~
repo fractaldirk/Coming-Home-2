@@ -1,0 +1,20 @@
+class CompetenciesController < ApplicationController
+  def index
+    @competencies = Competency.all
+  end
+
+  def show
+    @competency = Competency.find(params[:id])
+  end
+
+  def new
+    @competency = Competency.new
+  end
+
+  def create
+    @competency = Competency.new(params[:competency])
+      if condition
+
+      end
+  end
+end
