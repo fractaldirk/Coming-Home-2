@@ -6,10 +6,10 @@ class HomeController < ApplicationController
     @positions = Position.all
     @prtalks = Position.find(:all, :order => "next_performance_talk ASC").last(7)
   end
-  def salary
+  def performance
 
   end
-  def hr
+  def analytics
 
   end
 end

@@ -2,8 +2,8 @@ Hrhome::Application.routes.draw do
 
   devise_for :users
 
-  match 'home/salary' => 'home#salary'
-  match 'home/hr' => 'home#hr'
+  match 'home/analytics' => 'home#analytics'
+  match 'home/performance' => 'home#performance'
   match 'home/dictionary' => 'competencies#index'
 
   resources :home

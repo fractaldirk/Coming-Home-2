@@ -12,7 +12,4 @@ class HomeController < ApplicationController
   def hr
 
   end
-  def dictionary
-
-  end
 end

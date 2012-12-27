@@ -5,6 +5,4 @@
     <li><%= link_to 'Competency Dictionary', home_dictionary_path %></li>
     <li><%= link_to 'PRTs', home_hr_path %></li>
     <li><%= link_to 'Analytics', home_salary_path %></li>
-
-
 </ul>
