@@ -1,0 +1,25 @@
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+  google.load("visualization", "1", {packages:["corechart"]});
+  google.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['International', <%= Position.sum(:fte, :conditions => { :office => "1"}) %>],
+      ['Netherlands', <%= Position.sum(:fte, :conditions => { :office => "2"}) %>],
+      ['Germany', <%= Position.sum(:fte, :conditions => { :office => "3"}) %>],
+      ['Mediterranean', <%= Position.sum(:fte, :conditions => { :office => "4"}) %>],
+      ['United Kingdom', <%= Position.sum(:fte, :conditions => { :office => "5"}) %>]
+    ]);
+
+    var options = {
+      title: 'Number of FTE per office'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+</script>
+
+
+<div id="chart_div"></div>

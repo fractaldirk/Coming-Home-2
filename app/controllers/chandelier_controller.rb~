@@ -1,0 +1,5 @@
+class ChandelierController < ApplicationController
+  def index
+    @positions = Position.find(:all, :conditions => { :office => "2" })
+  end
+end

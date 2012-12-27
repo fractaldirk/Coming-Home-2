@@ -1,0 +1,7 @@
+<h1>But there is a black chandelier</h1>
+
+<%= render "map"%>
+
+<br/>
+
+<%= render "fte_pie_chart" %>

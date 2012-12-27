@@ -1,0 +1,29 @@
+<head>
+  <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+  <script type='text/javascript'>
+   google.load('visualization', '1', {'packages': ['geochart']});
+   google.setOnLoadCallback(drawRegionsMap);
+
+    function drawRegionsMap() {
+      var data = google.visualization.arrayToDataTable([
+        ['Country', 'Fte', 'Employees'],
+        ['Greenland', <%= Position.sum(:fte, :conditions => { :office => "1"}) %>, <%= Position.count(:job_title, :conditions => { :office => "1"}) %>],
+        ['Netherlands', <%= Position.sum(:fte, :conditions => { :office => "2"}) %>, <%= Position.count(:job_title, :conditions => { :office => "2"}) %>],
+        ['Germany', <%= Position.sum(:fte, :conditions => { :office => "3"}) %>, <%= Position.count(:job_title, :conditions => { :office => "3"}) %>],
+        ['Turkey', <%= Position.sum(:fte, :conditions => { :office => "4"}) %>, <%= Position.count(:job_title, :conditions => { :office => "4"}) %>],
+        ['United Kingdom', <%= Position.sum(:fte, :conditions => { :office => "5"}) %>, <%= Position.count(:job_title, :conditions => { :office => "5"}) %>]
+      ]);
+
+      var options = {};
+
+      var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+  };
+  </script>
+</head>
+<body>
+  <div id="chart_div" style="width: 900px; height: 500px;"></div>
+    <center>
+      <p><strong>International office = Greenland</strong></p>
+    </center>
+</body>

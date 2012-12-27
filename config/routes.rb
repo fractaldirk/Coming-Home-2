@@ -8,6 +8,8 @@ Hrhome::Application.routes.draw do
 
   resources :home
 
+  resources :chandelier
+
   resources :competencies
 
   resources :positions do

@@ -3,8 +3,17 @@ module ApplicationHelper
     if current_user.user_office == 1
       "International"
     elsif current_user.user_office == 2
-      "Amsterdam"
+      "Netherlands"
+    elsif current_user.user_office == 3
+      "Germany"
+    elsif current_user.user_office == 4
+      "Mediterranean"
+    elsif current_user.user_office == 5
+      "United Kingdom"
+    else
+      "Unidentified"
     end
+
   end
 
   def link_to_add_fields(name, f, association)
