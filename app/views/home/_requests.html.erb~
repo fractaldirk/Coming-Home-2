@@ -1,19 +1,6 @@
-<table class="table table-hover">
-  <tr>
-    <th>Date</th>
-    <th>Job title</th>
-    <th>Person</th>
-    <th>Supervised by</th>
-  </tr>
+<p>list of requests</p>
 
-<% @prtalks.each do |position| %>
-  <% if position.office == current_user.user_office %>
-    <tr>
-      <td><%= position.next_performance_talk.strftime("%d %B %Y") unless position.next_performance_talk.nil? %></td>
-      <td><%= link_to position.job_title, position %></td>
-      <td><%= position.name %></td>
-      <td><%= position.reports_to %></td>
-    </tr>
-  <% end %>
-<% end %>
-</table>
+<blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <small>Someone famous <cite title="Source Title">Source Title</cite></small>
+</blockquote>

@@ -1,15 +1,32 @@
-<center>
-  <h2>Greenpeace <%= office_name %> - Home</h2>
-</center>
+<h2>Greenpeace <%= office_name %></h2>
 
+<br/>
+
+<div class="row-fluid">
+  <div class="span2">
+    <br/>
+  </div>
+  <div class="span8">
+    <blockquote>
+      <p>If money is your hope for independence you will never have it. The only real security that a man will have in this world is a reserve of knowledge, experience, and ability.</p>
+      <small><cite title="Source Title">Henry Ford</cite></small>
+    </blockquote>
+  </div>
+  <div class="span2">
+
+  </div>
+</div>
 
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="span2">
       <%= render 'menu' %>
     </div>
-    <div class="span10">
+    <div class="span8">
       <%= render "tabs" %>
+    </div>
+    <div class="span2">
+      <%= render "prt_list" %>
     </div>
   </div>
 </div>

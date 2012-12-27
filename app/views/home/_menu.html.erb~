@@ -1,8 +1,10 @@
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
 
-<p><i>  Office Toolbox</i></p>
+<p><i>Office Toolbox</i></p>
 <ul id="menu">
-    <li><%= link_to 'Salary', home_index_path %></li>
-    <li><%= link_to 'Recruitment', home_recruitment_path %></li>
-    <li><%= link_to 'Performance Appraisal', home_performance_path %></li>
+    <li><%= link_to 'Competency Dictionary', home_dictionary_path %></li>
+    <li><%= link_to 'PRTs', home_hr_path %></li>
+    <li><%= link_to 'Analytics', home_salary_path %></li>
+
+
 </ul>
