@@ -6,7 +6,7 @@
     <th>Supervised by</th>
   </tr>
 
-<% @prtalks.each do |position| unless position.next_performance_talk.nil? %>
+<% @prtalks.each do |position| %>
   <% if position.office == current_user.user_office %>
     <tr>
       <td><%= position.next_performance_talk.strftime("%d %B %Y") unless position.next_performance_talk.nil? %></td>
@@ -14,7 +14,6 @@
       <td><%= position.name %></td>
       <td><%= position.reports_to %></td>
     </tr>
-    <% end %>
   <% end %>
 <% end %>
 </table>

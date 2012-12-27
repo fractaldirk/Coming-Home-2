@@ -1,0 +1,21 @@
+
+  <strong><em>Upcoming Performance Review Talks</em></strong>
+  <br/>
+  <br/>
+<div class="prt">
+    <table class="table">
+      <tr>
+        <th>Date</th>
+        <th>Job title</th>
+      </tr>
+
+    <% @prtalks.each do |position| %>
+      <% if position.office == current_user.user_office and position.next_performance_talk.present? %>
+        <tr>
+          <td><%= position.next_performance_talk.strftime("%d %B %Y") unless position.next_performance_talk.nil? %></td>
+          <td><%= link_to position.job_title, position %></td>
+        </tr>
+      <% end %>
+    <% end %>
+    </table>
+</div>
