@@ -8,6 +8,14 @@ Hrhome::Application.routes.draw do
 
   resources :home
 
+  resources :chandelier do
+    member do
+      get 'fte'
+      get 'employees'
+      get 'salary'
+    end
+  end
+
   resources :competencies
 
   resources :positions do

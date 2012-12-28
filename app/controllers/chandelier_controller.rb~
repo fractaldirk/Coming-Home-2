@@ -1,5 +1,17 @@
 class ChandelierController < ApplicationController
   def index
-    @positions = Position.find(:all, :conditions => { :office => "2" })
+
+  end
+
+  def fte
+    put "hello world"
+  end
+
+  def employees
+
+  end
+
+  def salary
+
   end
 end

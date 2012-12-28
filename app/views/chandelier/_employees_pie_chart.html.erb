@@ -1,0 +1,25 @@
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+  google.load("visualization", "1", {packages:["corechart"]});
+  google.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Office', 'Size (employees)'],
+      ['International', <%= Position.count(:job_title, :conditions => { :office => "1"}) %>],
+      ['Netherlands', <%= Position.count(:job_title, :conditions => { :office => "2"}) %>],
+      ['Germany', <%= Position.count(:job_title, :conditions => { :office => "3"}) %>],
+      ['Mediterranean', <%= Position.count(:job_title, :conditions => { :office => "4"}) %>],
+      ['United Kingdom', <%= Position.count(:job_title, :conditions => { :office => "5"}) %>]
+    ]);
+
+    var options = {
+      title: 'Number of employees per office'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+</script>
+
+
+<div id="chart_div"></div>
