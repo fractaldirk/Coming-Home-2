@@ -30,6 +30,10 @@
 	  </div>
 
 	  <div class="field">
+	    <%= f.text_field :age %>
+	  </div>
+
+	  <div class="field">
 	    <%= f.label :gender %><br />
 	    <%= f.select(:gender, [['Female', '1'], ['Male', '2']], :prompt => 'Please select') %>
 	  </div>

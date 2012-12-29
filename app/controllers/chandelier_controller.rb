@@ -3,6 +3,10 @@ class ChandelierController < ApplicationController
 
   end
 
+  def graphs
+
+  end
+
   def fte
 
   end

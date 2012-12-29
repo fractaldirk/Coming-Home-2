@@ -8,13 +8,11 @@ Hrhome::Application.routes.draw do
 
   resources :home
 
-  resources :chandelier do
-    member do
-      get 'fte'
-      get 'employees'
-      get 'salary'
-    end
-  end
+  match 'chandelier/fte' => 'chandelier#fte'
+  match 'chandelier/employees' => 'chandelier#employees'
+  match 'chandelier/salary' => 'chandelier#salary'
+
+  resources :chandelier
 
   resources :competencies
 

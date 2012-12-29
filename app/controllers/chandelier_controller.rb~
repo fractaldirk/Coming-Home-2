@@ -3,8 +3,12 @@ class ChandelierController < ApplicationController
 
   end
 
+  def graphs
+
+  end
+
   def fte
-    put "hello world"
+
   end
 
   def employees

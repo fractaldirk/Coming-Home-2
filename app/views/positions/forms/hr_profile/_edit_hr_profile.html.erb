@@ -29,6 +29,10 @@
 	    <%= f.date_select(:birth_date, :order => [:day, :month, :year], :start_year => 1930, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }) %>
 	  </div>
 
+	  <div class="hidden">
+	    <%= f.text_field :age %>
+	  </div>
+
 	  <div class="field">
 	    <%= f.label :gender %><br />
 	    <%= f.select(:gender, [['Female', '1'], ['Male', '2']], :prompt => 'Please select') %>

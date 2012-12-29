@@ -15,4 +15,13 @@ module PositionsHelper
   def hrp_tweet_updated_by
     "was updated (hr profile) by #{current_user.user_name}"
   end
+
+  def cp_tweet_updated_by
+    "was updated (competency profile) by #{current_user.user_name}"
+  end
+
+  def set_age
+    now = Time.now.utc.to_date
+    now.year - birth_date.year - ((now.month > birth_date.month || (now.month == birth_date.month && now.day >= birth_date.day)) ? 0 : 1)
+  end
 end

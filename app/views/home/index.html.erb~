@@ -1,5 +1,5 @@
 <h2>Greenpeace <%= office_name %></h2>
-
+<p><%= link_to 'Chandelier', chandelier_index_path, subdomain: "awesome" %></p>
 <br/>
 
 <div class="row-fluid">
@@ -7,7 +7,7 @@
     <br/>
   </div>
   <div class="span8">
-    <blockquote>
+    <blockquote class="pull-right">
       <p>If money is your hope for independence you will never have it. The only real security that a man will have in this world is a reserve of knowledge, experience, and ability.</p>
       <small><cite title="Source Title">Henry Ford</cite></small>
     </blockquote>
