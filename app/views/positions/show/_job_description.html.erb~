@@ -82,6 +82,6 @@
 </div>
 
 <div class="span1">
-  <br/>Download: <%= link_to 'Word', position_path(format: "doc") %>
-  <br/><%= link_to 'PDF', position_path(format: "pdf") %>
+  <br/>Download: <%= link_to 'Word', position_path(format: "doc") %><br/>
+  <%= link_to 'Wordy', position_path(format: "docx") %>
 </div>
