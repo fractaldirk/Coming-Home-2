@@ -3,9 +3,5 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #competency_field {
-  width: 500pt;
-}
-
-#competency_type {
-  width: 125pt;
+  width: 500px;
 }

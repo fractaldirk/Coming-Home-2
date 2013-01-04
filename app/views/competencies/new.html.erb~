@@ -16,8 +16,15 @@
   <%= f.text_field :competency_name, :id => "competency_field" %>
 </div>
 
+<div class="field">
+  <%= f.label :competency_type, "Define type" %>
+  <%= f.select(:competency_name, [['Functional', '1'], ['Method Related', '2'], ['Social/Self', '3'], ['Leadership', '4']], :prompt => "Please choose", :id => "competency_type")  %>
+</div>
+
 <div class="actions">
   <%= f.submit %>
 </div>
 
 <% end %>
+
+<br/>

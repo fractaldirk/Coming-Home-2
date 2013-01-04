@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121229142325) do
+ActiveRecord::Schema.define(:version => 20130104042705) do
 
   create_table "competencies", :force => true do |t|
     t.string   "competency_name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20121229142325) do
     t.integer  "position_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.integer  "competency_type"
   end
 
   add_index "competencies", ["position_id"], :name => "index_competencies_on_position_id"
