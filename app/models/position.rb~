@@ -1,4 +1,6 @@
 class Position < ActiveRecord::Base
+  acts_as_xlsx
+
   before_create :age
 
   attr_accessible :job_title, :office, :valid_from, :job_grade, :reports_to, :line_manages,
@@ -18,6 +20,26 @@ class Position < ActiveRecord::Base
     end
   end
 
+  def name_of_office
+    if office == 1
+      "International"
+    elsif office == 2
+      "Netherlands"
+    elsif office == 3
+      "Germany"
+    elsif office == 4
+      "Mediterranean"
+    elsif office == 5
+      "United Kingdom"
+    else
+      "Unidentified"
+    end
+  end
+
+  def job_description_title
+    'Greenpeace ' + name_of_office + ' ' + job_title + ' Job Description'
+  end
+
   def age
     if birth_date.nil?
       "0"
@@ -26,6 +48,5 @@ class Position < ActiveRecord::Base
       now.year - birth_date.year - ((now.month > birth_date.month || (now.month == birth_date.month && now.day >= birth_date.day)) ? 0 : 1)
     end
   end
-
 
 end

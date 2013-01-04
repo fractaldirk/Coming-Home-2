@@ -65,9 +65,12 @@
       <li>Innovation</li>
     </ul>
   <br />
+  <% for competency in @position.competencies %>
+    <b><u>Technical competencies</u></b>
 
-    <b><u>Job related competencies</u></b>
+      <%=h competency.competency_name %>
 
+  <% end %>
   <p><h4>ATTITUDE</h4></p>
 
   <br />
@@ -83,5 +86,6 @@
 
 <div class="span1">
   <br/>Download: <%= link_to 'Word', position_path(format: "doc") %><br/>
-  <%= link_to 'Wordy', position_path(format: "docx") %>
+  <%= link_to 'Wordy', position_path(format: "docx") %><br/>
+  <%= link_to 'Excel JD', position_path(format: "xlsx") %>
 </div>

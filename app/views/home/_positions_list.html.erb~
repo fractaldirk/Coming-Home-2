@@ -9,10 +9,10 @@
     <th></th>
   </tr>
 
-<% @prtalks.each do |position| %>
+<% @positions.each do |position| %>
   <% if position.office == current_user.user_office %>
     <tr>
-      <td><%= link_to position.next_performance_talk, position %></td>
+      <td><%= link_to position.job_title, position %></td>
       <td><%= position.department %></td>
       <td><%= position.name %></td>
       <td><%= link_to 'Edit', edit_position_path(position) %></td>

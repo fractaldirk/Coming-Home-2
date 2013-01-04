@@ -1,0 +1,6 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: 'Foobar') do |sheet|
+    <%= @positions.each do |datum| %>
+      sheet.add_row ['<%= datum.job_title %>', 'Sheet']
+    <% end %>
+end

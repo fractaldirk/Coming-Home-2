@@ -1,0 +1,73 @@
+wb = xlsx_package.workbook
+
+  styles = wb.styles
+  header = styles.add_style :bg_color => 'FF', :fg_color => '00', :b => true, :sz => 11, :alignment => {:horizontal => :center, :vertical => :center, :wrap_text => true}
+  date_format = styles.add_style :format_code => 'DD-MM-YYYY', :sz => 11, :bg_color => 'FF', :alignment => {:horizontal => :left}
+  horizontal_roll =  styles.add_style :border => { :style => :thick, :color =>"00", :edges => [:bottom] }, :sz => 11, :bg_color => 'FF', :alignment => {:horizontal => :left}
+  top_roll = styles.add_style :border => { :style => :thin, :color =>"00", :edges => [:top] }, :bg_color => 'FF'
+  standard = styles.add_style :sz => 11, :bg_color => 'FF', :alignment => {:horizontal => :left, :wrap_text => true}
+  standard_b = styles.add_style :sz => 11, :bg_color => 'FF', :alignment => {:horizontal => :left, :wrap_text => true}, :b => true
+  standard_b_u = styles.add_style :sz => 11, :bg_color => 'FF', :alignment => {:horizontal => :left, :wrap_text => true}, :b => true, :u => true
+
+wb.add_worksheet(name: 'Public JD Template') do |sheet|
+  sheet.add_row [@position.job_description_title],  :style => header
+  sheet.add_row ['','','','','',''], :style => standard
+  sheet.add_row ['','','','','',''], :style => standard
+  sheet.add_row ['', 'Job title', ':', @position.job_title, '', ''], :style => standard_b
+  sheet.add_row ['', 'Valid from', ':', @position.valid_from, '', ''], :style => date_format
+  sheet.add_row ['', 'Job grade', ':', @position.job_grade, '', ''], :style => standard
+  sheet.add_row ['', 'Reports to', ':', @position.reports_to, '', ''], :style => standard
+  sheet.add_row ['', 'Line-manages', ':', @position.line_manages, '', ''], :style => standard
+  sheet.add_row ['','','','','',''], :style => standard
+  sheet.add_row ['','','','','',''], :style => standard
+  sheet.add_row ['', 'OVERALL PURPOSE OF THE JOB', '', '', '', ''], :style => standard_b
+  sheet.add_row ['', @position.overall_purpose, '', '', '', ''], :style => standard
+  sheet.add_row ['','','','','',''], :style => standard
+  sheet.add_row ['','SCOPE','','','',''], :style => standard_b
+  sheet.add_row ['', @position.scope,'','','',''], :style => standard
+  sheet.add_row ['','','','','',''], :style => standard
+  sheet.add_row ['','MAJOR FUNCTIONS / RESPONSIBILITIES','','','',''], :style => standard_b
+  sheet.add_row ['','','','','',''], :style => standard
+  sheet.add_row ['','Conceptual tasks, Strategy Development and/or Project Development','','','',''], :style => standard_b_u
+  sheet.add_row ['', @position.conceptual,'','','',''], :style => standard
+  sheet.add_row ['','','','','',''], :style => standard
+  sheet.add_row ['','Implementation','','','',''], :style => standard_b_u
+  sheet.add_row ['', @position.implementation,'','','',''], :style => standard
+  sheet.add_row ['','','','','',''], :style => standard
+  sheet.add_row ['','Support / Coaching / Leadership','','','',''], :style => standard_b_u
+  sheet.add_row ['', @position.support,'','','',''], :style => standard
+  sheet.add_row ['','','','','',''], :style => standard
+  sheet.add_row ['','COMPETENCY PROFILE','','','',''], :style => standard_b
+  sheet.add_row ['','','','','',''], :style => standard
+  sheet.add_row ['','Organization competencies','','','',''], :style => standard_b_u
+  sheet.add_row ['','- Professionalism, in particular autonomous','','','',''], :style => standard
+  sheet.add_row ['','- Achievement, in particular effective in reaching objectives','','','',''], :style => standard
+  sheet.add_row ['','- Interpersonal relationship, in particular build and manage relationships with colleagues','','','',''], :style => standard
+  sheet.add_row ['','- Knowledge sharing','','','',''], :style => standard
+  sheet.add_row ['','- Values diversity, in particular refers to global mindset','','','',''], :style => standard
+  sheet.add_row ['','- Innovation, in particular ability to create the model for change','','','',''], :style => standard
+  sheet.merge_cells("A1:F2")
+  sheet.merge_cells("D4:E4")
+  sheet.merge_cells("B11:E11")
+  sheet.merge_cells("B12:E12")
+  sheet.merge_cells("B14:E14")
+  sheet.merge_cells("B15:E15")
+  sheet.merge_cells("B17:E17")
+  sheet.merge_cells("B19:E19")
+  sheet.merge_cells("B20:E20")
+  sheet.merge_cells("B22:E22")
+  sheet.merge_cells("B23:E23")
+  sheet.merge_cells("B25:E25")
+  sheet.merge_cells("B26:E26")
+  sheet.merge_cells("B28:E28")
+  sheet.merge_cells("B30:E30")
+  sheet.merge_cells("B31:E31")
+  sheet.merge_cells("B32:E32")
+  sheet.merge_cells("B33:E33")
+  sheet.merge_cells("B34:E34")
+  sheet.merge_cells("B35:E35")
+  sheet.merge_cells("B36:E36")
+  sheet["A3:F3"].each { |c| c.style = top_roll }
+  sheet["B9:E9"].each { |c| c.style = horizontal_roll }
+  sheet.column_widths 2, 15, 2, 15, 45, 2
+end

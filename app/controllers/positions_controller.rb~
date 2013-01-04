@@ -14,11 +14,13 @@ class PositionsController < ApplicationController
   # GET /positions/1.json
   def show
     @position = Position.find(params[:id])
+    @positions = Position.all
 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @position }
       format.xls
+      format.xlsx
       format.doc
       format.docx
     end

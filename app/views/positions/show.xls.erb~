@@ -53,7 +53,7 @@
         <Cell><Data ss:Type="String"><%=h competency.competency_name %></Data></Cell>
         <Cell><Data ss:Type="Number"><%=h competency.competency_cpv %></Data></Cell>
         <Cell><Data ss:Type="Number"><%=h competency.competency_value %></Data></Cell>
-        <Cell><Data ss:Type="Number"></Data></Cell>
+        <Cell><Data ss:Type="Number"></Data>0</Cell>
       </Row>
     <% end %>
     </Table>
