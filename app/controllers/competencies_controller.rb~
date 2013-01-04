@@ -1,6 +1,7 @@
 class CompetenciesController < ApplicationController
   def index
-    @competencies = Competency.all
+      @competencies = Competency.order(:competency_name).where("competency_name like ?", "%#{params[:term]}%")
+      render json: @competencies.map(&:competency_name)
   end
 
   def show
@@ -13,8 +14,15 @@ class CompetenciesController < ApplicationController
 
   def create
     @competency = Competency.new(params[:competency])
-      if condition
 
+    respond_to do |format|
+      if @competency.save
+        format.html { redirect_to @competency, notice: 'Competency was successfully created.' }
+        format.json { render json: @competency, status: :created, location: @competency }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @competency.errors, status: :unprocessable_entity }
       end
+    end
   end
 end

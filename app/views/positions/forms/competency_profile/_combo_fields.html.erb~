@@ -1,0 +1,238 @@
+<tr>
+  <div class="ui-widget">
+    <td>
+    <select id="combobox2">
+      <option value="Scheme"></option>
+      <% @competencies.each do |competency| %>
+        <option value="Scheme"><%= competency.competency_name %></option>
+      <% end %>
+    </select>
+    </td>
+    <td><%= f.select(:competency_value, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.select(:competency_cpv, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.hidden_field :_destroy %>
+        <%= link_to "remove", '#', class: "remove_fields" %></td>
+  </div>
+</tr>
+
+
+<tr>
+  <div class="ui-widget">
+    <td>
+    <select id="combobox3">
+      <option value="Scheme"></option>
+      <% @competencies.each do |competency| %>
+        <option value="Scheme"><%= competency.competency_name %></option>
+      <% end %>
+    </select>
+    </td>
+    <td><%= f.select(:competency_value, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.select(:competency_cpv, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.hidden_field :_destroy %>
+        <%= link_to "remove", '#', class: "remove_fields" %></td>
+  </div>
+</tr>
+
+<tr>
+  <div class="ui-widget">
+    <td>
+    <select id="combobox4">
+      <option value="Scheme"></option>
+      <% @competencies.each do |competency| %>
+        <option value="Scheme"><%= competency.competency_name %></option>
+      <% end %>
+    </select>
+    </td>
+    <td><%= f.select(:competency_value, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.select(:competency_cpv, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.hidden_field :_destroy %>
+        <%= link_to "remove", '#', class: "remove_fields" %></td>
+  </div>
+</tr>
+
+<tr>
+  <div class="ui-widget">
+    <td>
+    <select id="combobox5">
+      <option value="Scheme"></option>
+      <% @competencies.each do |competency| %>
+        <option value="Scheme"><%= competency.competency_name %></option>
+      <% end %>
+    </select>
+    </td>
+    <td><%= f.select(:competency_value, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.select(:competency_cpv, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.hidden_field :_destroy %>
+        <%= link_to "remove", '#', class: "remove_fields" %></td>
+  </div>
+</tr>
+
+<tr>
+  <div class="ui-widget">
+    <td>
+    <select id="combobox6">
+      <option value="Scheme"></option>
+      <% @competencies.each do |competency| %>
+        <option value="Scheme"><%= competency.competency_name %></option>
+      <% end %>
+    </select>
+    </td>
+    <td><%= f.select(:competency_value, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.select(:competency_cpv, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.hidden_field :_destroy %>
+        <%= link_to "remove", '#', class: "remove_fields" %></td>
+  </div>
+</tr>
+
+<tr>
+  <div class="ui-widget">
+    <td>
+    <select id="combobox7">
+      <option value="Scheme"></option>
+      <% @competencies.each do |competency| %>
+        <option value="Scheme"><%= competency.competency_name %></option>
+      <% end %>
+    </select>
+    </td>
+    <td><%= f.select(:competency_value, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.select(:competency_cpv, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.hidden_field :_destroy %>
+        <%= link_to "remove", '#', class: "remove_fields" %></td>
+  </div>
+</tr>
+
+<tr>
+  <div class="ui-widget">
+    <td>
+    <select id="combobox8">
+      <option value="Scheme"></option>
+      <% @competencies.each do |competency| %>
+        <option value="Scheme"><%= competency.competency_name %></option>
+      <% end %>
+    </select>
+    </td>
+    <td><%= f.select(:competency_value, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.select(:competency_cpv, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.hidden_field :_destroy %>
+        <%= link_to "remove", '#', class: "remove_fields" %></td>
+  </div>
+</tr>
+
+<tr>
+  <div class="ui-widget">
+    <td>
+    <select id="combobox9">
+      <option value="Scheme"></option>
+      <% @competencies.each do |competency| %>
+        <option value="Scheme"><%= competency.competency_name %></option>
+      <% end %>
+    </select>
+    </td>
+    <td><%= f.select(:competency_value, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.select(:competency_cpv, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.hidden_field :_destroy %>
+        <%= link_to "remove", '#', class: "remove_fields" %></td>
+  </div>
+</tr>
+
+<tr>
+  <div class="ui-widget">
+    <td>
+    <select id="combobox10">
+      <option value="Scheme"></option>
+      <% @competencies.each do |competency| %>
+        <option value="Scheme"><%= competency.competency_name %></option>
+      <% end %>
+    </select>
+    </td>
+    <td><%= f.select(:competency_value, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.select(:competency_cpv, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.hidden_field :_destroy %>
+        <%= link_to "remove", '#', class: "remove_fields" %></td>
+  </div>
+</tr>
+
+<tr>
+  <div class="ui-widget">
+    <td>
+    <select id="combobox11">
+      <option value="Scheme"></option>
+      <% @competencies.each do |competency| %>
+        <option value="Scheme"><%= competency.competency_name %></option>
+      <% end %>
+    </select>
+    </td>
+    <td><%= f.select(:competency_value, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.select(:competency_cpv, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.hidden_field :_destroy %>
+        <%= link_to "remove", '#', class: "remove_fields" %></td>
+  </div>
+</tr>
+
+<tr>
+  <div class="ui-widget">
+    <td>
+    <select id="combobox12">
+      <option value="Scheme"></option>
+      <% @competencies.each do |competency| %>
+        <option value="Scheme"><%= competency.competency_name %></option>
+      <% end %>
+    </select>
+    </td>
+    <td><%= f.select(:competency_value, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.select(:competency_cpv, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.hidden_field :_destroy %>
+        <%= link_to "remove", '#', class: "remove_fields" %></td>
+  </div>
+</tr>
+
+<tr>
+  <div class="ui-widget">
+    <td>
+    <select id="combobox13">
+      <option value="Scheme"></option>
+      <% @competencies.each do |competency| %>
+        <option value="Scheme"><%= competency.competency_name %></option>
+      <% end %>
+    </select>
+    </td>
+    <td><%= f.select(:competency_value, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.select(:competency_cpv, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.hidden_field :_destroy %>
+        <%= link_to "remove", '#', class: "remove_fields" %></td>
+  </div>
+</tr>
+
+<tr>
+  <div class="ui-widget">
+    <td>
+    <select id="combobox14">
+      <option value="Scheme"></option>
+      <% @competencies.each do |competency| %>
+        <option value="Scheme"><%= competency.competency_name %></option>
+      <% end %>
+    </select>
+    </td>
+    <td><%= f.select(:competency_value, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.select(:competency_cpv, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.hidden_field :_destroy %>
+        <%= link_to "remove", '#', class: "remove_fields" %></td>
+  </div>
+</tr>
+
+<tr>
+  <div class="ui-widget">
+    <td>
+    <select id="combobox15">
+      <option value="Scheme"></option>
+      <% @competencies.each do |competency| %>
+        <option value="Scheme"><%= competency.competency_name %></option>
+      <% end %>
+    </select>
+    </td>
+    <td><%= f.select(:competency_value, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.select(:competency_cpv, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+    <td><%= f.hidden_field :_destroy %>
+        <%= link_to "remove", '#', class: "remove_fields" %></td>
+  </div>
+</tr>

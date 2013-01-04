@@ -1,7 +1,16 @@
 <fieldset>
-  <td id="competency_field"><%= f.text_field :competency_name, :id => "competency_field" %></td>
-  <td><%= f.select(:competency_value, ['1','2','3','4']) %></td>
-  <td><%= f.select(:competency_cpv, ['1','2','3','4'] ) %></td>
+<div class="ui-widget">
+  <td>
+  <select id="combobox2">
+    <option value="Scheme"></option>
+    <% @competencies.each do |competency| %>
+      <option value="Scheme"><%= competency.competency_name %></option>
+    <% end %>
+  </select>
+  </td>
+  <td><%= f.select(:competency_value, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
+  <td><%= f.select(:competency_cpv, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
   <td><%= f.hidden_field :_destroy %>
       <%= link_to "remove", '#', class: "remove_fields" %></td>
+</div>
 </fieldset>

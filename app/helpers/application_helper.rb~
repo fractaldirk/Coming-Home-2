@@ -7,7 +7,7 @@ module ApplicationHelper
     elsif current_user.user_office == 3
       "Germany"
     elsif current_user.user_office == 4
-      "mediterranean"
+      "Mediterranean"
     elsif current_user.user_office == 5
       "United Kingdom"
     else

@@ -20,7 +20,6 @@ class PositionsController < ApplicationController
       format.json { render json: @position }
       format.xls
       format.doc
-      format.pdf
     end
   end
 
@@ -102,6 +101,7 @@ class PositionsController < ApplicationController
 
   def edit_competency_profile
     @position = Position.find(params[:id])
+    @competencies = Competency.all
     @tweet = Tweet.new
     1.times { @position.competencies.build }
   end

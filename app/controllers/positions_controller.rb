@@ -101,8 +101,14 @@ class PositionsController < ApplicationController
 
   def edit_competency_profile
     @position = Position.find(params[:id])
+    @competencies = Competency.all
     @tweet = Tweet.new
     1.times { @position.competencies.build }
+
+    respond_to do |format|
+      format.html # edit_competency_profile.html.erb
+      format.json { render json: @position }
+    end
   end
 
 end

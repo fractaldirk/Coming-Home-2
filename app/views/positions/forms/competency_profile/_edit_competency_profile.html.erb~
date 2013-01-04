@@ -22,14 +22,13 @@
     <%= f.fields_for :competencies do |builder| %>
     <table class="competencies">
       <tr>
-        <th id="competency_field">Competency</th>
-        <th>Importance level</th>
-        <th>CP Value</th>
+        <th id="competency_name" align="left">Competency name</th>
+        <th id="select_field_th">Importance level</th>
+        <th id="select_field_th">CP Value</th>
         <th></th>
       </tr>
-
       <tr>
-        <%= render 'competency_fields', f: builder %>
+        <%= render 'positions/forms/competency_profile/combo_fields', f: builder %>
       </tr>
     </table>
         <%= link_to_add_fields "New competency", f, :competencies %>
@@ -39,7 +38,7 @@
   <hr />
 
   <div class="tab-pane" id="activity">
-    <%= render 'positions/forms/hr_profile/create_tweet' %>
+    <%= render 'positions/forms/competency_profile/create_tweet' %>
   </div>
 </div>
 
