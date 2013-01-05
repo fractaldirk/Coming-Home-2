@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130104042705) do
+ActiveRecord::Schema.define(:version => 20130104234922) do
 
   create_table "competencies", :force => true do |t|
     t.string   "competency_name"
@@ -63,6 +63,11 @@ ActiveRecord::Schema.define(:version => 20130104042705) do
     t.date     "next_performance_talk"
     t.string   "favorite_color"
     t.integer  "age"
+    t.string   "attitude1"
+    t.string   "attitude2"
+    t.string   "attitude3"
+    t.string   "attitude4"
+    t.string   "attitude5"
   end
 
   create_table "tweets", :force => true do |t|

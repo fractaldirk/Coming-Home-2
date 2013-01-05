@@ -6,7 +6,7 @@ wb = xlsx_package.workbook
   horizontal_roll =  styles.add_style :border => { :style => :thick, :color =>"00", :edges => [:bottom] }, :sz => 11, :bg_color => 'FF', :alignment => {:horizontal => :left}
   top_roll = styles.add_style :border => { :style => :thin, :color =>"00", :edges => [:top] }, :bg_color => 'FF'
   standard = styles.add_style :sz => 11, :bg_color => 'FF', :alignment => {:horizontal => :left, :wrap_text => true}
-  standard_b = styles.add_style :sz => 11, :bg_color => 'FF', :alignment => {:horizontal => :left, :wrap_text => true}, :b => true, :u => true
+  standard_b = styles.add_style :sz => 11, :bg_color => 'FF', :alignment => {:horizontal => :left, :wrap_text => true}, :b => true
   standard_b_u = styles.add_style :sz => 11, :bg_color => 'FF', :alignment => {:horizontal => :left, :wrap_text => true}, :b => true, :u => true
 
 wb.add_worksheet(name: 'Public JD Template') do |sheet|
@@ -46,6 +46,21 @@ wb.add_worksheet(name: 'Public JD Template') do |sheet|
   sheet.add_row ['','- Knowledge sharing','','','',''], :style => standard
   sheet.add_row ['','- Values diversity, in particular refers to global mindset','','','',''], :style => standard
   sheet.add_row ['','- Innovation, in particular ability to create the model for change','','','',''], :style => standard
+  sheet.add_row ['','','','','',''], :style => standard
+  sheet.add_row ['','Job related competencies','','','',''], :style => standard_b_u
+    for competency in @position.competencies
+      sheet.add_row ['', competency.competency_name_excel,'','','',''], :style => standard
+    end
+  sheet.add_row ['','','','','',''], :style => standard
+  sheet.add_row ['','ATTITUDE','','','',''], :style => standard_b
+  sheet.add_row ['', @position.attitude1_excel,'','','',''], :style => standard
+  sheet.add_row ['', @position.attitude2_excel,'','','',''], :style => standard
+  sheet.add_row ['', @position.attitude3_excel,'','','',''], :style => standard
+  sheet.add_row ['', @position.attitude4_excel,'','','',''], :style => standard
+  sheet.add_row ['', @position.attitude5_excel,'','','',''], :style => standard
+  sheet.add_row ['','','','','',''], :style => standard
+  sheet.add_row ['','SPECIFIC WORK ENVIRONMENT','','','',''], :style => standard_b
+  sheet.add_row ['', @position.specific_work_env,'','','',''], :style => standard
   sheet.merge_cells("A1:F2")
   sheet.merge_cells("D4:E4")
   sheet.merge_cells("B11:E11")
@@ -67,6 +82,36 @@ wb.add_worksheet(name: 'Public JD Template') do |sheet|
   sheet.merge_cells("B34:E34")
   sheet.merge_cells("B35:E35")
   sheet.merge_cells("B36:E36")
+  sheet.merge_cells("B37:E37")
+  sheet.merge_cells("B38:E38")
+  sheet.merge_cells("B39:E39")
+  sheet.merge_cells("B40:E40")
+  sheet.merge_cells("B41:E41")
+  sheet.merge_cells("B42:E42")
+  sheet.merge_cells("B43:E44")
+  sheet.merge_cells("B45:E45")
+  sheet.merge_cells("B46:E46")
+  sheet.merge_cells("B47:E47")
+  sheet.merge_cells("B48:E48")
+  sheet.merge_cells("B49:E49")
+  sheet.merge_cells("B50:E50")
+  sheet.merge_cells("B51:E51")
+  sheet.merge_cells("B52:E52")
+  sheet.merge_cells("B53:E53")
+  sheet.merge_cells("B54:E54")
+  sheet.merge_cells("B55:E55")
+  sheet.merge_cells("B56:E56")
+  sheet.merge_cells("B57:E57")
+  sheet.merge_cells("B58:E58")
+  sheet.merge_cells("B59:E59")
+  sheet.merge_cells("B60:E60")
+  sheet.merge_cells("B61:E61")
+  sheet.merge_cells("B62:E62")
+  sheet.merge_cells("B63:E63")
+  sheet.merge_cells("B64:E64")
+  sheet.merge_cells("B65:E65")
+  sheet.merge_cells("B66:E66")
+  sheet.merge_cells("B67:E67")
   sheet["A3:F3"].each { |c| c.style = top_roll }
   sheet["B9:E9"].each { |c| c.style = horizontal_roll }
   sheet.column_widths 2, 15, 2, 15, 45, 2

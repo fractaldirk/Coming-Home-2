@@ -1,7 +1,7 @@
 class CompetenciesController < ApplicationController
   def index
-      @competencies = Competency.order(:competency_name).where("competency_name like ?", "%#{params[:term]}%")
-      render json: @competencies.map(&:competency_name)
+    @competencies = Competency.order(:id).where("competency_name like ?", "%#{params[:term]}%")
+    render json: @competencies.map(&:competency_name)
   end
 
   def show

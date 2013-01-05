@@ -7,7 +7,8 @@ class Position < ActiveRecord::Base
                   :overall_purpose, :scope, :specific_work_env, :conceptual, :implementation,
                   :support, :fte, :unique_position, :permanent, :department, :name,
                   :birth_date, :gender, :nationality, :res_status, :start_date, :type_contract,
-                  :next_performance_talk, :age, :competencies_attributes
+                  :next_performance_talk, :age, :competencies_attributes,
+                  :attitude1, :attitude2, :attitude3, :attitude4, :attitude5
   has_many :tweets
   has_many :competencies
   accepts_nested_attributes_for :competencies, allow_destroy: true
@@ -38,6 +39,36 @@ class Position < ActiveRecord::Base
 
   def job_description_title
     'GREENPEACE ' + name_of_office + ' ' + job_title + ' Job Description'
+  end
+
+  def attitude1_excel
+    unless attitude1 = ''
+      '- ' + attitude1
+    end
+  end
+
+  def attitude2_excel
+    unless attitude2 = ''
+      '- ' + attitude2
+    end
+  end
+
+  def attitude3_excel
+    unless attitude3 = ''
+      '- ' + attitude3
+    end
+  end
+
+  def attitude4_excel
+    unless attitude4 = ''
+      '- ' + attitude4
+    end
+  end
+
+  def attitude5_excel
+    unless attitude5 = ''
+      '- ' + attitude5
+    end
   end
 
   def age

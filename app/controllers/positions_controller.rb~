@@ -14,13 +14,12 @@ class PositionsController < ApplicationController
   # GET /positions/1.json
   def show
     @position = Position.find(params[:id])
-    @positions = Position.all
 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @position }
       format.xls
-      format.xlsx
+      format.xlsx render :xlsx => "show", :filename => "lala.xlsx"
       format.doc
       format.docx
     end
@@ -104,7 +103,6 @@ class PositionsController < ApplicationController
 
   def edit_competency_profile
     @position = Position.find(params[:id])
-    @competencies = Competency.all
     @tweet = Tweet.new
     1.times { @position.competencies.build }
 

@@ -84,13 +84,19 @@
 
   <div class="tab-pane" id="attitude">
     <div class="field">
-      <p>Add attitude fields</p>
+      <p>Only 5 attitude options are available in the demo version.</p>
+      <%= f.label :attitude1, "Define attitudes for the ideal candidate" %>
+      <%= f.text_field :attitude1 %>
+      <%= f.text_field :attitude2 %>
+      <%= f.text_field :attitude3 %>
+      <%= f.text_field :attitude4 %>
+      <%= f.text_field :attitude5 %>
   	</div>
   </div>
-</div>
 
-<div class="tab-pane" id="activity">
-  <%= render 'positions/forms/job_description/create_tweet' %>
+  <div class="tab-pane" id="activity">
+    <%= render 'positions/forms/job_description/create_tweet' %>
+  </div>
 </div>
 
 <%= f.submit "Done", :class => "btn btn-success", :id => "submit_button", :name => "jobdescription_button" %>

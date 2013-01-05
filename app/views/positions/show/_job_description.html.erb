@@ -65,14 +65,22 @@
       <li>Innovation</li>
     </ul>
   <br />
-  <% for competency in @position.competencies %>
-    <b><u>Technical competencies</u></b>
-    <% if competency.competency_type == 1 %>
-      <%=h competency.competency_name %>
-    <% end %>
-  <% end %>
-  <p><h4>ATTITUDE</h4></p>
 
+    <b><u>Job related competencies</u></b>
+      <ul>
+  <% for competency in @position.competencies %>
+        <li><%=h competency.competency_name %></li>
+  <% end %>
+      </ul>
+
+  <p><h4>ATTITUDE</h4></p>
+      <ul>
+        <li><%= @position.attitude1 %></li>
+        <li><%= @position.attitude2 %></li>
+        <li><%= @position.attitude3 %></li>
+        <li><%= @position.attitude4 %></li>
+        <li><%= @position.attitude5 %></li>
+      </ul>
   <br />
 
     <p><h4>SPECIFIC WORK ENVIRONMENT</h4></p>

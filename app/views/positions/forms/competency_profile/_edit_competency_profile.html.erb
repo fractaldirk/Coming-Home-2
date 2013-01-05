@@ -18,6 +18,8 @@
 
 <div class="tab-content">
   <div class="tab-pane active" id="general">
+  <p>No different specification in technical, method related, social/self and leadership competencies yet (since this is a demo version).</p>
+  <p>In the real version, likely five different database collumns will be build. This to capture and manage the 'normal' competencies and also the organisational competencies. These will be created in the dictionary function and will be rendered(displayed) on this page for user interaction.</p>
 
     <%= f.fields_for :competencies do |builder| %>
     <table class="competencies">
@@ -27,15 +29,18 @@
         <th id="select_field_th">CP Value</th>
         <th></th>
       </tr>
-        <%= render 'positions/forms/competency_profile/combo_fields', f: builder %>
+
+      <tr>
+        <%= render 'competency_fields', f: builder %>
+      </tr>
     </table>
         <%= link_to_add_fields "New competency", f, :competencies %>
     <% end %>
 
   </div>
-  <hr />
 
   <div class="tab-pane" id="activity">
+    <p>Each update will be displayed on the home page to track user activity. This tab gives you the opportunity to make a litte note for yourself. In future versions this function will be added on a side panel rather than in a tab, however for now it is here, so you won't miss it :)</p>
     <%= render 'positions/forms/competency_profile/create_tweet' %>
   </div>
 </div>

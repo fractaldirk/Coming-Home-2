@@ -84,7 +84,13 @@
 
   <div class="tab-pane" id="attitude">
     <div class="field">
-      <p>Add attitude fields</p>
+      <p>Only 5 attitude options are available in the demo version.</p>
+      <%= f.label :attitude1, "Define attitudes for the ideal candidate" %>
+      <%= f.text_field :attitude1 , :id => 'attitude' %><br/>
+      <%= f.text_field :attitude2 , :id => 'attitude' %><br/>
+      <%= f.text_field :attitude3 , :id => 'attitude' %><br/>
+      <%= f.text_field :attitude4 , :id => 'attitude' %><br/>
+      <%= f.text_field :attitude5 , :id => 'attitude' %><br/>
   	</div>
   </div>
 

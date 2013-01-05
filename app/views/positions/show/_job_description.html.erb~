@@ -65,12 +65,14 @@
       <li>Innovation</li>
     </ul>
   <br />
+
+    <b><u>Job related competencies</u></b>
+      <ul>
   <% for competency in @position.competencies %>
-    <b><u>Technical competencies</u></b>
-
-      <%=h competency.competency_name %>
-
+        <li><%=h competency.competency_name %></li>
   <% end %>
+      </ul>
+
   <p><h4>ATTITUDE</h4></p>
 
   <br />

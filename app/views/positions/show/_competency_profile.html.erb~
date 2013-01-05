@@ -1,6 +1,5 @@
 <div class="span1">
-  <br/><%= link_to 'Edit competency profile', edit_competency_profile_position_path %><br/>
-  <br/>Download: <%= link_to 'Excel', position_path(format: "xls") %>
+  <br/><%= link_to 'Edit competency profile', edit_competency_profile_position_path %>
 </div>
 
 <div class="span10">
@@ -11,17 +10,18 @@
       <th id="competency_field">Competency</th>
       <th>Importance level</th>
       <th>CP Value</th>
+      <th>xD</th>
     </tr>
     <% for competency in @position.competencies %>
     <tr>
-      <td><%=h competency.competency_name %></td>
-      <td><%=h competency.competency_value %></td>
-      <td><%=h competency.competency_cpv  %></td>
+      <% if Competency.order(:id).where("id = ompetency.competency_name") %>
+        <%= competency.competency_type %>
+      <% end %>
     </tr>
     <% end %>
   </table>
 </div>
 
 <div class="span1">
-  <br/>
+  <br/>Download: <%= link_to 'Excel', position_path(format: "xls") %>
 </div>

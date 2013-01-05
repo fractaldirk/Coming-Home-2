@@ -103,7 +103,6 @@ class PositionsController < ApplicationController
 
   def edit_competency_profile
     @position = Position.find(params[:id])
-    @competencies = Competency.all
     @tweet = Tweet.new
     1.times { @position.competencies.build }
 

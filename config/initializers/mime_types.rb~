@@ -7,3 +7,4 @@
 Mime::Type.register "application/xls", :xls
 Mime::Type.register "application/doc", :doc
 Mime::Type.register "application/docx", :docx
+Mime::Type.register "application/vnd.openxmlformates-officedocument.spreadsheetml.sheet", :xlsx

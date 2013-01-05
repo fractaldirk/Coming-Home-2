@@ -12,12 +12,8 @@
   right: 5%;
 }
 
-#competency_name {
-  width: 500pt;
-}
-
 #select_field {
-  width: 32pt;
+  width: 95pt;
 }
 
 #select_field_th {
