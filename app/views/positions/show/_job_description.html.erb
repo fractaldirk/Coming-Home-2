@@ -1,5 +1,6 @@
 <div class="span1">
   <br/><%= link_to 'Edit job description', edit_job_description_position_path %>
+  <%= link_to 'Home', home_index_path, :class => 'btn' %>
 </div>
 
 <div class="span10">
@@ -93,7 +94,6 @@
 </div>
 
 <div class="span1">
-  <br/>Download: <%= link_to 'Word', position_path(format: "doc") %><br/>
-  <%= link_to 'Wordy', position_path(format: "docx") %><br/>
-  <%= link_to 'Excel JD', position_path(format: "xlsx") %>
+  <br/>Download:
+  <%= link_to 'Export', position_path(format: "xlsx"), :class => 'btn btn-primary' %>
 </div>

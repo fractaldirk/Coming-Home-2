@@ -1,0 +1,6 @@
+<div class= "graphs">
+    <p><em>Graphs</em></p>
+    <%= link_to 'fte', chandelier_fte_path, :class => 'btn btn-inverse' %><br/>
+    <%= link_to 'employees', chandelier_employees_path, :class => 'btn btn-info' %><br/>
+    <%= link_to 'salary', chandelier_salary_path, :class => 'btn btn-info' %><br/>
+</div>

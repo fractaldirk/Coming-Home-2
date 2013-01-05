@@ -1,10 +1,12 @@
 <h2>Greenpeace <%= office_name %></h2>
-<p><%= link_to 'Chandelier', chandelier_index_path, subdomain: "awesome" %></p>
 <br/>
 
 <div class="row-fluid">
   <div class="span2">
-    <br/>
+    <center>
+      <%= link_to 'Livescreen', chandelier_index_path, :class => 'btn btn-primary' %>
+    </center>
+
   </div>
   <div class="span8">
     <blockquote class="pull-right">

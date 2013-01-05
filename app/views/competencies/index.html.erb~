@@ -1,14 +1,88 @@
-<h1><br/></h1>
-<div class="span1">
-  <br/>
-</div>
+<h1>Dictionairy</h1>
+<br/>
 
-<div class="span10">
-  <% @competencies.each do |competency| %>
-    <li><%= competency.competency_name %></li><br/>
-  <% end %>
-</div>
+<div class="row-fluid">
+  <div class="span1">
+    <br/>
+    <%= link_to 'Back', chandelier_index_path %>
+  </div>
 
-<div class="span1">
-  <br/>
+  <div class="span8">
+    <%= link_to 'Add a competency', new_competency_path, :class => 'btn btn-info' %>
+    <p>The dictionary contains only an add button for now. It is not possible to update or delete competencies since it is a demo version.</p>
+    <h4>List of competencies available</h4>
+    <br/>
+    <table class="table">
+      <tr>
+        <th>Organisational</th>
+      </tr>
+      <% @competencies.each do |competency| %>
+      <tr>
+        <% if competency.competency_type == 5 %>
+          <td><%= competency.competency_name %></td>
+        <% end %>
+      </tr>
+      <% end %>
+    </table>
+
+    <table class="table">
+      <tr>
+        <th>Technical</th>
+      </tr>
+      <% @competencies.each do |competency| %>
+      <tr>
+        <% if competency.competency_type == 1 %>
+          <td><%= competency.competency_name %></td>
+        <% end %>
+      </tr>
+      <% end %>
+    </table>
+
+    <table class="table">
+      <tr>
+        <th>Method related</th>
+      </tr>
+      <% @competencies.each do |competency| %>
+      <tr>
+        <% if competency.competency_type == 2 %>
+          <td><%= competency.competency_name %></td>
+        <% end %>
+      </tr>
+      <% end %>
+    </table>
+
+    <table class="table">
+      <tr>
+        <th>Social/self</th>
+      </tr>
+      <% @competencies.each do |competency| %>
+      <tr>
+        <% if competency.competency_type == 3 %>
+          <td><%= competency.competency_name %></td>
+        <% end %>
+      </tr>
+      <% end %>
+    </table>
+
+    <table class="table">
+      <tr>
+        <th>Leadership</th>
+      </tr>
+      <% @competencies.each do |competency| %>
+      <tr>
+        <% if competency.competency_type == 4 %>
+          <td><%= competency.competency_name %></td>
+        <% end %>
+      </tr>
+      <% end %>
+    </table>
+
+  </div>
+
+  <div class="span3">
+    <h4>Possible challenges</h4>
+    <p>This function allows GPI to manage competencies. This function can help in solving the following challenge.</p>
+    <h5>Language</h5>
+    <p>It would be possible to build a multi langual dictionary. Five different collumns will be build in the databse (technical, method related, social, leadership and organisational). Each competency will get an unique ID. Each ID will include an English competency. If a French dictionary needs to be developed the English competency will be translated into French and will get the same ID. Then depending on the office it will display the competency either in English or French. </p>
+  </div>
 </div>

@@ -1,1 +1,11 @@
-<%= render 'employees_pie_chart' %>
+<div class="span1">
+  <br/>
+</div>
+
+<div class="span9">
+  <%= render 'employees_pie_chart' %>
+</div>
+
+<div class="span2">
+  <%= render 'menu' %>
+</div>

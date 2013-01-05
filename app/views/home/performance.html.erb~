@@ -1,2 +1,22 @@
-<h1>HR Analysis</h1>
-<br/>
+<h4>Process control</h4>
+<%= link_to 'Back', home_index_path, :class => 'btn' %>
+
+<div class="row-fluid">
+  <div class="span1">
+    <br/>
+  </div>
+
+  <div class="span4">
+    <h4>Set prt dates</h4>
+    <p>It would be a neat function to control the prt process according competencies. This means that easily prt dates for each position can be filed into the database and can be displayed on the home screen. This will help the HR manager to have an overview of the PRT process.</p>
+  </div>
+
+  <div class="span4">
+    <h4>Template handling</h4>
+
+  </div>
+
+  <div class="span3">
+    <br/>
+  </div>
+</div>

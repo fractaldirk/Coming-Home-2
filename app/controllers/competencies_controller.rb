@@ -16,8 +16,8 @@ class CompetenciesController < ApplicationController
 
     respond_to do |format|
       if @competency.save
-        format.html { redirect_to @competency, notice: 'Competency was successfully created.' }
-        format.json { render json: @competency, status: :created, location: @competency }
+        format.html { redirect_to competencies_path , notice: 'Competency was successfully created.' }
+        format.json { render json: competencies_path, status: :created, location: @competency }
       else
         format.html { render action: "new" }
         format.json { render json: @competency.errors, status: :unprocessable_entity }

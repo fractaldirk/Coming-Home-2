@@ -1,32 +1,42 @@
-<div class="span1">
-  <br/><br/>
-  <p>Topics:</p>
-  <li><%= link_to 'Dictionary', competencies_path %></li>
-  <li><%= link_to 'Visualisation', chandelier_graphs_path %></li>
-</div>
+<h2>Dashboard</h2>
+<hr />
+<div class="row-fluid">
+  <div class="span2">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <p><i>Livescreen Toolbox</i></p>
+    <ul id="menu">
+    <li><%= link_to 'Dictionary', competencies_path %></li>
+    <li><%= link_to 'Training', chandelier_graphs_path %></li>
+    </ul>
+    <br/>
+    <br/>
+    <%= link_to 'Operational screen', home_index_path, :class => 'btn' %>
+  </div>
 
-<div class="span9">
-  <h4>Welcome to the Dashboard</h4>
-  <p>This page will display all relative data between all NROs using Blue Robin.</p>
-  <p>For now the demo page will consist of two sections:
-  <ul>
-    <li>Competency Dictionary management</li>
-    <li>Visualisation (graphs)</li>
-  </ul>
-  </p>
-  <p>Be awesome and click one of the topics to find out more!</p>
+  <div class="span8">
+    <h4>Livescreen</h4>
+    <p>This page is the dashboard of GPI (also called livescreen). Next to the operational page of GPI (and other NROs) exists this page which allows GPI to manage several HR processes.</p>
 
-  <h5>Future development</h5>
-  <p>Future functions of the dashboard could include:
-  <ul>
-    <li>Salary overview of all offices</li>
-    <li>Announcement function(s) and other communication tools</li>
-    <li>Requests overview and other interaction tools</li>
-    <li>Reporting functions exportable to pdf and excel</li>
-  </ul>
-  </p>
-</div>
+    <h4>The Dictionary</h4>
+    <p>You will be able to manage the competency dictionary from here. If you go to the dictionary tool you will be able to create competencies which will be added to the selection list for competencies on the operational level. In this way GPI will be in control of the list of competencies which can be used.</p>
 
-<div class="span2">
-  <%= render 'menu' %>
+    <h4>Visualisation (graphs)</h4>
+    <p>By using google graphs it would be possible to display some neat graphs about the current HR state of the offices. To give you a little taste please click on the graph links on the right side.</p>
+    <p>For the future this would be useful for generating reports aswell as having a table overview of the current HR state of each office. This could help in de decision making process and simplifies reporting process for NROs and GPI.</p>
+
+    <h5>Future development</h5>
+    <p>In the future this will be a highly interactive screen in order to assist HR processes globally.</p>
+    <p>Future functions of the dashboard could include:
+    <ul>
+      <li>Salary overview of all offices</li>
+      <li>Announcement function(s) and other communication tools</li>
+      <li>Requests overview and other interaction tools</li>
+      <li>Reporting functions exportable to pdf and excel</li>
+    </ul>
+    </p>
+  </div>
+
+  <div class="span2">
+    <%= render 'menu' %>
+  </div>
 </div>

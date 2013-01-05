@@ -1,5 +1,6 @@
 <div class="span1">
   <br/><%= link_to 'Edit job description', edit_job_description_position_path %>
+  <%= link_to 'Home', home_index_path, :class => 'btn' %>
 </div>
 
 <div class="span10">
@@ -74,7 +75,13 @@
       </ul>
 
   <p><h4>ATTITUDE</h4></p>
-
+      <ul>
+        <li><%= @position.attitude1 %></li>
+        <li><%= @position.attitude2 %></li>
+        <li><%= @position.attitude3 %></li>
+        <li><%= @position.attitude4 %></li>
+        <li><%= @position.attitude5 %></li>
+      </ul>
   <br />
 
     <p><h4>SPECIFIC WORK ENVIRONMENT</h4></p>
@@ -87,7 +94,6 @@
 </div>
 
 <div class="span1">
-  <br/>Download: <%= link_to 'Word', position_path(format: "doc") %><br/>
-  <%= link_to 'Wordy', position_path(format: "docx") %><br/>
-  <%= link_to 'Excel JD', position_path(format: "xlsx") %>
+  <br/>Download:
+  <%= link_to 'Export JD', position_path(format: "xlsx") %>
 </div>

@@ -1,5 +1,6 @@
 <div class="span1">
   <br/><%= link_to 'Edit competency profile', edit_competency_profile_position_path %>
+  <%= link_to 'Home', home_index_path, :class => 'btn' %>
 </div>
 
 <div class="span10">
@@ -10,13 +11,12 @@
       <th id="competency_field">Competency</th>
       <th>Importance level</th>
       <th>CP Value</th>
-      <th>xD</th>
     </tr>
     <% for competency in @position.competencies %>
     <tr>
-      <% if Competency.order(:id).where("id = ompetency.competency_name") %>
-        <%= competency.competency_type %>
-      <% end %>
+      <td><%=h competency.competency_name %></td>
+      <td><%=h competency.competency_value %></td>
+      <td><%=h competency.competency_cpv  %></td>
     </tr>
     <% end %>
   </table>

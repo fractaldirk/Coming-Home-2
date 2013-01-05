@@ -8,6 +8,7 @@ Hrhome::Application.routes.draw do
 
   resources :home
 
+  match 'chandelier/graphs' => 'chandelier#graphs'
   match 'chandelier/fte' => 'chandelier#fte'
   match 'chandelier/employees' => 'chandelier#employees'
   match 'chandelier/salary' => 'chandelier#salary'

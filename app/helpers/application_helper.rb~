@@ -11,7 +11,7 @@ module ApplicationHelper
     elsif current_user.user_office == 5
       "United Kingdom"
     else
-      "Unidentified"
+      "Admin/GPI"
     end
 
   end

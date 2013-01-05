@@ -54,15 +54,21 @@ class Position < ActiveRecord::Base
   end
 
   def attitude3_excel
-    '- ' + attitude3
+    unless attitude3 = ''
+      '- ' + attitude3
+    end
   end
 
   def attitude4_excel
-    '- ' + attitude4
+    unless attitude4 = ''
+      '- ' + attitude4
+    end
   end
 
   def attitude5_excel
-    '- ' + attitude5
+    unless attitude5 = ''
+      '- ' + attitude5
+    end
   end
 
   def age

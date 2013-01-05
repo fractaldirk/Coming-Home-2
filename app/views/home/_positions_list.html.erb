@@ -4,7 +4,7 @@
   <tr>
     <th>Job title</th>
     <th>Department</th>
-    <th>Filled by</th>
+    <th>Status</th>
     <th></th>
     <th></th>
   </tr>
@@ -14,7 +14,7 @@
     <tr>
       <td><%= link_to position.job_title, position %></td>
       <td><%= position.department %></td>
-      <td><%= position.name %></td>
+      <td><%= position.position_status %></td>
       <td><%= link_to 'Edit', edit_position_path(position) %></td>
       <td><%= link_to 'Destroy', position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>

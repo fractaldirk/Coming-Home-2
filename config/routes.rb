@@ -4,7 +4,7 @@ Hrhome::Application.routes.draw do
 
   match 'home/analytics' => 'home#analytics'
   match 'home/performance' => 'home#performance'
-  match 'home/dictionary' => 'competencies#index'
+  match 'home/dictionary' => 'home#dictionary'
 
   resources :home
 
