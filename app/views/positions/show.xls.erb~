@@ -5,6 +5,8 @@
   xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
   xmlns:html="http://www.w3.org/TR/REC-html40">
 
+header('Content-Disposition: attachment; filename="name_of_excel_file.xls"');
+
   <Worksheet ss:Name="Guidelines">
     <Table>
       <Row>

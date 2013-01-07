@@ -19,6 +19,7 @@ class PositionsController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @position }
       format.xlsx
+      format.xls
     end
   end
 
