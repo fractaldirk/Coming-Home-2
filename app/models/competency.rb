@@ -4,6 +4,6 @@ class Competency < ActiveRecord::Base
                   :job_title, :office, :competency_type
 
   def competency_name_excel
-    '- ' + competency_name
+    '- ' + competency_name.to_s
   end
 end

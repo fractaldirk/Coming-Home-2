@@ -14,10 +14,10 @@ class Position < ActiveRecord::Base
   accepts_nested_attributes_for :competencies, allow_destroy: true
 
   def position_status
-    if name == ""
-      "Vacant"
-    else
+    if name.present?
       "Filled"
+    else
+      "Vacant"
     end
   end
 
@@ -46,36 +46,36 @@ class Position < ActiveRecord::Base
   end
 
   def job_description_title
-    'GREENPEACE ' + name_of_office + ' ' + job_title + ' Job Description'
+    'GREENPEACE ' + name_of_office.to_s + ' ' + job_title.to_s + ' Job Description'
   end
 
   def attitude1_excel
     unless attitude1 == ''
-      '- ' + attitude1
+      '- ' + attitude1.to_s
     end
   end
 
   def attitude2_excel
     unless attitude2 == ''
-      '- ' + attitude2
+      '- ' + attitude2.to_s
     end
   end
 
   def attitude3_excel
     unless attitude3 == ''
-      '- ' + attitude3
+      '- ' + attitude3.to_s
     end
   end
 
   def attitude4_excel
     unless attitude4 == ''
-      '- ' + attitude4
+      '- ' + attitude4.to_s
     end
   end
 
   def attitude5_excel
     unless attitude5 == ''
-      '- ' + attitude5
+      '- ' + attitude5.to_s
     end
   end
 
