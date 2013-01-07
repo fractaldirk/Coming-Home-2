@@ -19,7 +19,7 @@ class PositionsController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @position }
       format.xls
-      format.xlsx render :xlsx => "show", :filename => "lala.xlsx"
+      format.xlsx
       format.doc
       format.docx
     end
