@@ -61,6 +61,7 @@ wb.add_worksheet(name: 'Public JD Template') do |sheet|
   sheet.add_row ['','','','','',''], :style => standard
   sheet.add_row ['','SPECIFIC WORK ENVIRONMENT','','','',''], :style => standard_b
   sheet.add_row ['', @position.specific_work_env,'','','',''], :style => standard
+  sheet.add_row ['','','','','',''], :style => standard
   sheet.merge_cells("A1:F2")
   sheet.merge_cells("D4:E4")
   sheet.merge_cells("B11:E11")
