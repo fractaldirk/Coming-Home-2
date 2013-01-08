@@ -4,7 +4,7 @@ Hrhome::Application.routes.draw do
 
   match 'home/analytics' => 'home#analytics'
   match 'home/performance' => 'home#performance'
-  match 'home/dictionary' => 'competencies#index'
+  match 'home/dictionary' => 'home#dictionary'
 
   resources :home
 
@@ -15,6 +15,7 @@ Hrhome::Application.routes.draw do
 
   resources :chandelier
 
+  match 'competencies/list' => 'competency#list'
   resources :competencies
 
   resources :positions do
