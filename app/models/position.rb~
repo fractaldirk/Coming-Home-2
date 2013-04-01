@@ -14,10 +14,10 @@ class Position < ActiveRecord::Base
   accepts_nested_attributes_for :competencies, allow_destroy: true
 
   def position_status
-    if name == ""
-      "Vacant"
-    else
+    if name.present?
       "Filled"
+    else
+      "Vacant"
     end
   end
 

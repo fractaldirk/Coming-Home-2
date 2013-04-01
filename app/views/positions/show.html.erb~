@@ -1,4 +1,5 @@
-<div id="showCarousel" class="carousel slide">
+<div id="showCarousel" class="carousel slide" data-interval="false">
+  <h1><%= current_user.language %></h1>
   <!-- Carousel items -->
   <div class="carousel-inner">
     <div class="active item">

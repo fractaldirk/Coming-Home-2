@@ -1,10 +1,15 @@
 Hrhome::Application.routes.draw do
 
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   devise_for :users
 
   match 'home/analytics' => 'home#analytics'
   match 'home/performance' => 'home#performance'
   match 'home/dictionary' => 'home#dictionary'
+  match 'home/database' => 'home#database'
 
   resources :home
 
@@ -22,6 +27,7 @@ Hrhome::Application.routes.draw do
       get 'edit_job_description'
       get 'edit_hr_profile'
       get 'edit_competency_profile'
+      get 'steal'
     end
   end
 

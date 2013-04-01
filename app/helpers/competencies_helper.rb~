@@ -1,0 +1,13 @@
+module CompetenciesHelper
+  def competency_right
+    if current_user.language == 1
+      competency_name
+    elsif current_user.language == 2
+      spanish
+    elsif current_user.language == 3
+      french
+    else
+      competency_name
+    end
+  end
+end

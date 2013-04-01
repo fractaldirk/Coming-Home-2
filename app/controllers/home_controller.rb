@@ -12,4 +12,9 @@ class HomeController < ApplicationController
   def analytics
 
   end
+
+  def database
+    @positions = Position.find(:all, :order => "created_at DESC")
+    @tweets = Tweet.find(:all, :order => "created_at DESC")
+  end
 end

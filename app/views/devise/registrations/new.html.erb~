@@ -16,7 +16,10 @@
   <%= f.password_field :password_confirmation %></div>
 
   <div><%= f.label :user_office, 'Your office' %><br />
-  <%= f.select(:user_office, [['International', '1'], ['Amsterdam', '2']], :prompt => 'Please select') %></div>
+  <%= f.select(:user_office, [['International', '1'], ['Netherlands', '2'], ['Germany', '3'], ['Mediterranean', '4'], ['United Kingdom', '5']], :prompt => 'Please select') %></div>
+
+  <div><%= f.label :language, 'Preferred language' %><br />
+  <%= f.select(:user_office, [['English', '1'], ['Spanish', '2'], ['French', '3']], :prompt => 'Please select') %></div>
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>

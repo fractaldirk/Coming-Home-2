@@ -95,5 +95,6 @@
 
 <div class="span1">
   <br/>Download:
-  <%= link_to 'Export JD', position_path(format: "xlsx") %>
+  <%= link_to 'Export', position_path(format: "xlsx"), :class => 'btn btn-primary' %><br/>
+  <%= link_to 'Steal', steal_position_path(@position), :class => 'btn btn-primary' %>
 </div>

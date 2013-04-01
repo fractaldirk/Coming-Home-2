@@ -20,8 +20,15 @@ module PositionsHelper
     "was updated (competency profile) by #{current_user.user_name}"
   end
 
-  def set_age
-    now = Time.now.utc.to_date
-    now.year - birth_date.year - ((now.month > birth_date.month || (now.month == birth_date.month && now.day >= birth_date.day)) ? 0 : 1)
+  def competency_right
+    if current_user.language == 1
+      "competency_name"
+    elsif current_user.language == 2
+      "spanish"
+    elsif current_user.language == 3
+      "french"
+    else
+      "competency_name"
+    end
   end
 end

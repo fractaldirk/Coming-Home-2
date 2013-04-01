@@ -1,0 +1,15 @@
+ActiveAdmin.register Position do
+  index do
+    column :id
+    column :job_title
+    column
+      if :office == 1
+        "International"
+      else
+        "Other"
+      end
+    column :created_at
+    column :updated_at
+    default_actions
+  end
+end

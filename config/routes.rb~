@@ -15,7 +15,6 @@ Hrhome::Application.routes.draw do
 
   resources :chandelier
 
-  match 'competencies/list' => 'competency#list'
   resources :competencies
 
   resources :positions do
@@ -23,6 +22,7 @@ Hrhome::Application.routes.draw do
       get 'edit_job_description'
       get 'edit_hr_profile'
       get 'edit_competency_profile'
+      get 'steal'
     end
   end
 

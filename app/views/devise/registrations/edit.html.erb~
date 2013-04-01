@@ -10,7 +10,7 @@
   <%= f.email_field :email %></div>
 
   <div><%= f.label :user_office, 'Your office' %><br />
-  <%= f.select(:user_office, [['International', '1'], ['Amsterdam', '2']], :prompt => 'Please select') %></div>
+  <%= f.select(:user_office, [['International', '1'], ['Netherlands', '2'], ['Germany', '3'], ['Mediterranean', '4'], ['United Kingdom', '5']], :prompt => 'Please select') %></div>
 
   <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
   <%= f.password_field :password %></div>

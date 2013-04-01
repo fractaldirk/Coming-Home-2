@@ -8,7 +8,7 @@ class Position < ActiveRecord::Base
                   :support, :fte, :unique_position, :permanent, :department, :name,
                   :birth_date, :gender, :nationality, :res_status, :start_date, :type_contract,
                   :next_performance_talk, :age, :competencies_attributes,
-                  :attitude1, :attitude2, :attitude3, :attitude4, :attitude5
+                  :attitude1, :attitude2, :attitude3, :attitude4, :attitude5, :favorite_color
   has_many :tweets
   has_many :competencies
   accepts_nested_attributes_for :competencies, allow_destroy: true

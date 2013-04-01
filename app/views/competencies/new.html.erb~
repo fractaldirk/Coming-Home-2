@@ -18,7 +18,7 @@
 
 <div class="field">
   <%= f.label :competency_type, "Define type" %>
-  <%= f.select(:competency_name, [['Technical', '1'], ['Method Related', '2'], ['Social/Self', '3'], ['Leadership', '4'], ['Organisational', '5']], :prompt => "Please choose", :id => "competency_type")  %>
+  <%= f.select(:competency_type, [['Technical', '1'], ['Method Related', '2'], ['Social/Self', '3'], ['Leadership', '4'], ['Organisational', '5']], :prompt => "Please choose", :id => "competency_type")  %>
 </div>
 
 <div class="actions">

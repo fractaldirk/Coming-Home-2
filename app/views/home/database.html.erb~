@@ -1,0 +1,54 @@
+<h2>All Job Descriptions</h2>
+<br/>
+
+<div class="row-fluid">
+  <div class="span2">
+    <center>
+      <%= link_to 'Livescreen', chandelier_index_path, :class => 'btn btn-primary', :style => "color: white;" %>
+    </center>
+
+  </div>
+  <div class="span8">
+    <blockquote class="pull-right">
+      <p>If money is your hope for independence you will never have it. The only real security that a man will have in this world is a reserve of knowledge, experience, and ability.</p>
+      <small><cite title="Source Title">Henry Ford</cite></small>
+    </blockquote>
+  </div>
+  <div class="span2">
+
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+      <%= render 'menu' %>
+    </div>
+    <div class="span8">
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active"><a href="#activity" data-toggle="tab">Activity</a></li>
+  <li><a href="#positions" data-toggle="tab">Positions</a></li>
+  <li><a href="#requests" data-toggle="tab">Requests</a></li>
+</ul>
+
+
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane fade in active" id="activity">
+          <% @tweets.each do |tweet| %>
+            <% if tweet.tweet_office == current_user.user_office %>
+              <p class="activity">The position <strong><%= tweet.tweet_position %></strong> <%= tweet.tweet_name %> at <%= tweet.created_at.strftime("%d %B %Y at %H:%M") %>.<br/>
+              <% if tweet.body? %>
+                (<%= tweet.body %>)
+              <% end %>
+              </p><br/>
+            <% end %>
+          <% end %>
+        </div>
+
+        <div class="tab-pane fade" id="positions">
+          <p><%= render 'all_positions_list' %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

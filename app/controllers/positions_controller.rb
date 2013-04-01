@@ -62,11 +62,16 @@ class PositionsController < ApplicationController
   # PUT /positions/1
   # PUT /positions/1.json
   def update
-    @position = Position.find(params[:id])
+    @position = Position.new
     @tweet = Tweet.new(params[:tweet])
 
     respond_to do |format|
-      if @position.update_attributes(params[:position])
+      if params[:steal_button]
+        @position.update_attributes(params[:position])
+        @tweet.save
+        format.html { redirect_to home_index_path, notice: 'Yay, position was successfully stolen.' }
+        format.json { head :no_content }
+      elsif @position.update_attributes(params[:position])
         @tweet.save
         format.html { redirect_to @position, notice: 'Position was successfully updated.' }
         format.json { head :no_content }
@@ -110,4 +115,8 @@ class PositionsController < ApplicationController
     end
   end
 
+  def steal
+    @position = Position.find(params[:id])
+    @tweet = Tweet.new
+  end
 end

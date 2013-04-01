@@ -1,5 +1,14 @@
 <fieldset>
-  <td><%= f.select(:competency_name,  Competency.order(:id).where("competency_name like ?", "%#{params[:term]}%").map(&:competency_name).uniq) %></td>
+  <% if current_user.language == 1 %>
+    <td><%= f.select(:competency_name,  Competency.order(:id).where("competency_name like ?", "%#{params[:term]}%").map(&:competency_name).uniq) %></td>
+  <% elsif current_user.language == 2 %>
+    <td><%= f.select(:competency_name,  Competency.order(:id).where("competency_name like ?", "%#{params[:term]}%").map(&:spanish).uniq) %></td>
+  <% elsif current_user.language == 2 %>
+    <td><%= f.select(:competency_name,  Competency.order(:id).where("competency_name like ?", "%#{params[:term]}%").map(&:french).uniq) %></td>
+  <% else %>
+    <td><%= f.select(:competency_name,  Competency.order(:id).where("competency_name like ?", "%#{params[:term]}%").map(&:competency_name).uniq) %></td>
+  <% end %>
+
   <td><%= f.select(:competency_value, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
   <td><%= f.select(:competency_cpv, [['1'],['2'],['3'],['4']], { :prompt => "0"}, :id => "select_field") %></td>
   <td><%= f.hidden_field :_destroy %>

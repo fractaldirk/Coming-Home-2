@@ -19,5 +19,4 @@ module PositionsHelper
   def cp_tweet_updated_by
     "was updated (competency profile) by #{current_user.user_name}"
   end
-
 end
